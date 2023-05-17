@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HeaderController;
+use App\Models\Header;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('landing');
+    return view('landing', [
+        'header' => Header::first()
+    ]);
 });
 
 Route::middleware(['guest'])->group(function() {
@@ -29,4 +33,6 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function() {
     Route::get('/', function() {
         return view('dashboard.index');
     });
+    Route::resource('/header', HeaderController::class);
+    
 });

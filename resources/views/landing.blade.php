@@ -22,14 +22,14 @@
             <div class="row">
                 <div class="col-lg-6" style="display: flex; flex-direction: column; justify-content: center; height: 100vh;">
                     <div class="logo">
-                        <img src="/assets/img/logo-oas.png" width="150px" alt="">
+                        <img src="{{ asset('storage/' . $header->logo) }}" width="150px" alt="">
                     </div>
-                    <h6 class="my-3" style="color: #3CBD6D">Diskon 50%</h6>
+                    <h6 class="my-3" style="color: #3CBD6D">Diskon {{ $header->diskon }} %</h6>
                     <div class="desc">
-                        <h1 style="font-weight: 700" data-aos="fade-up" data-aos-once="true">Rasakan Ketenangan dan Keindahan Menginap di Vila Mountain Oasis</h1>
+                        <h1 style="font-weight: 700" data-aos="fade-up" data-aos-once="true">{{ $header->heading }}</h1>
                     </div>
                     <div class="sub-dec mt-4">
-                        <p style="font-size: 16px">Nikmati pemandangan Mountain Oasis di Kota Batu sebagai tempat menginap keluarga yang layak, nyaman, aman dan istimewa, semua dengan biaya terjangkau.</p>
+                        <p style="font-size: 16px">{!! $header->subHeading !!}</p>
                     </div>
                     <div class="booking mt-5 pb-5">
                         <a href="#"><i style="margin-right: 10px" class="fa-brands fa-whatsapp"></i> Booking Sekarang</a>
@@ -37,7 +37,7 @@
                 </div>
                 <div class="col"></div>
                 <div class="col-lg-5 villa">
-                    <img class="img-fluid h-100" data-aos="fade-left" data-aos-once="true" src="/assets/img/header-img.png" alt="">
+                    <img class="img-fluid h-100" data-aos="fade-left" data-aos-once="true" src="{{ asset('storage/' . $header->image) }}" alt="">
                 </div>
             </div>
         </div>

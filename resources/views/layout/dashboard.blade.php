@@ -35,6 +35,26 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="/assets/dashboard/js/config.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/summernote-lite.min.css">
+    <script src="/assets/summernote-lite.min.js"></script>
+    <style>
+      .note-editor.fullscreen {
+        background-color: #fff; 
+      }
+      .logo:hover::after, .diskon:hover::after, .heading:hover::after, .sub-heading:hover::after, .image:hover::after {
+          content: attr(data-class);
+          position: absolute;
+          bottom: 90%;
+          left: 50%;
+          transform: translateX(-50%);
+          padding: 20px;
+          border-radius: 10px;
+          background-color: #222121;
+          color: #fff;
+          font-size: 20px;
+      }
+    </style>
 </head>
 <body>
     <!-- Layout wrapper -->

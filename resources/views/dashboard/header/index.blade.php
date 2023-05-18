@@ -23,9 +23,9 @@
                 <div class="d-flex align-items-end row">
                 <div class="col-12">
                     <div class="card-body">
+                        @if ($header !== null)
                         <section id="header" style="background-color: #1A4543; border-radius: 10px">
                             <div class="pt-5">
-                                @if ($header !== null)
                                     <div class="row p-3">
                                         <div class="col-lg-6" style="display: flex; flex-direction: column; justify-content: center; height: 100vh;">
                                             <div class="logo" data-class="logo">
@@ -47,11 +47,11 @@
                                             <img class="img-fluid h-100" data-aos="fade-left" data-aos-once="true" src="{{ asset('storage/' . $header->image) }}" alt="">
                                         </div>
                                     </div>
+                                </section>
                                 @else
-                                    <h1 class="d-flex justify-content-center align-items-center text-white">Data headers empty</h1>
+                                    <h1 class="d-flex justify-content-center align-items-center text-black">Data headers empty</h1>
                                 @endif
                             </div>
-                        </section>
                     </div>
                 </div>
                 </div>

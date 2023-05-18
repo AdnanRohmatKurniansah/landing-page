@@ -23,7 +23,7 @@
                 <div class="d-flex align-items-end row">
                     <div class="col-12">
                         <div class="card-body">
-                            <section id="question" class="p-3"  style="background-color: #F8F6F3; border-radius: 10px">
+                            <section id="question" class="p-3" style="background-color: #F8F6F3; border-radius: 10px">
                                 @if ($promosi !== null)   
                                     <div class="row p-3">
                                         <div class="heading col-lg-4 p-5 d-flex align-items-center" data-class="heading" style="background-color: black">
@@ -40,10 +40,10 @@
                                             <a class="p-3" style="background-color: #000; color: #fff" href="#"><i style="margin-right: 10px; font-size: 20px" class='bx bxl-whatsapp'></i> Booking Sekarang</a>
                                         </div>
                                     </div>
+                                </section>
                                 @else
-                                    <h1 class="d-flex justify-content-center align-items-center text-white">Data Promosi Empty</h1>
+                                    <h1 class="d-flex justify-content-center align-items-center text-black">Data Promosi Empty</h1>
                                 @endif
-                        </section>
                         </div>
                     </div>
                 </div>

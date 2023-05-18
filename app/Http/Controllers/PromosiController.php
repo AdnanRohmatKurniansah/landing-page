@@ -22,7 +22,7 @@ class PromosiController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.promosi.create');
     }
 
     /**
@@ -30,7 +30,14 @@ class PromosiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'heading' => 'required',
+            'text' => 'required'
+        ]);
+
+        Promosi::create($data);
+
+        return redirect('/dashboard/promosi')->with('success', 'New Promosi has been added!');
     }
 
     /**
@@ -72,6 +79,7 @@ class PromosiController extends Controller
      */
     public function destroy(Promosi $promosi)
     {
-        //
+         Promosi::destroy($promosi->id);
+         return redirect('/dashboard/promosi')->with('success', 'Promosi has been deleted!');
     }
 }

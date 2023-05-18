@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Promosi extends Model
 {
     use HasFactory;
-    protected $guearded = ['id'];
+    protected $guarded = ['id'];
 }

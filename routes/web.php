@@ -39,12 +39,16 @@ Route::middleware(['guest'])->group(function() {
     Route::post('/login', [AuthController::class, 'auth']);
 });
 
-Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
+    Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
 
 Route::middleware(['auth'])->prefix('dashboard')->group(function() {
     Route::get('/', function() {
         return view('dashboard.index');
     });
+    Route::get('/updatePass', [AuthController::class, 'show']);
+    Route::post('/updatePass', [AuthController::class, 'updatePassword']);
+    Route::get('/add', [AuthController::class, 'add']);
+    Route::post('/add', [AuthController::class, 'store']);
     Route::resource('/header', HeaderController::class);
     Route::resource('/promosi', PromosiControlleR::class);
     Route::resource('/facility', FacilityController::class);

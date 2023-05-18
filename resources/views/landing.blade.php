@@ -98,7 +98,7 @@
         <div class="booking mt-5 pb-5 d-flex justify-content-center">
             <a href="#"><i style="margin-right: 10px" class="fa-brands fa-whatsapp"></i> Booking Sekarang</a>
         </div>
-    </section>
+    </section> <!---->
     <section id="facility">
         <h2 class="d-flex justify-content-center mb-4" data-aos="fade-up" data-aos-once="true" style="font-weight: 500; margin-top: 60px">Fasilitas Unggulan Villa Mountain Oasis</h2>
         <div class="row">
@@ -121,37 +121,39 @@
               <div class="carousel-item active">
                 <div class="row">
                     <div class="col-lg-5">
-                        <img src="http://via.placeholder.com/1200x800" class="d-block w-100" alt="...">
+                        <img src="{{ asset('storage/' . $testimonies[0]->foto) }}" class="d-block w-100" alt="...">
                     </div>
                     <div class="col"></div>
                     <div class="col-lg-6 py-5">.
                         <i class="fa-solid fa-quote-left" style="font-size: 40px"></i><br>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id excepturi quaerat quae omnis qui harum, voluptas tenetur accusantium dignissimos vel inventore pariatur eaque ipsum tempora doloribus am nulla asperiores sapiente earum laboriosam blanditiis t
+                        {{ $testimonies[0]->opini }}
                         <div class="identity mt-3">
-                            <h6>Dessy<br>
-                            <span style="font-size: small; font-weight: 400">Jakarta</span>
+                            <h6>{{ $testimonies[0]->name }}<br>
+                            <span style="font-size: small; font-weight: 400">{{ $testimonies[0]->address }}</span>
                             </h6>
                         </div>
                     </div>
                 </div>
               </div>
-              <div class="carousel-item">
-                <div class="row">
-                    <div class="col-lg-5">
-                        <img src="http://via.placeholder.com/1200x800" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="col"></div>
-                    <div class="col-lg-6 py-5">.
-                        <i class="fa-solid fa-quote-left" style="font-size: 40px"></i><br>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id excepturi quaerat quae omnis qui harum, voluptas tenetur accusantium dignissimos vel inventore pariatur eaque ipsum tempora doloribus am nulla asperiores sapiente earum laboriosam blanditiis t
-                        <div class="identity mt-3">
-                            <h6>Dessy<br>
-                            <span style="font-size: small; font-weight: 400">Jakarta</span>
-                            </h6>
+              @foreach ($testimonies->skip(1) as $testimoni)
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <img src="{{ asset('storage/' . $testimoni->foto) }}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="col"></div>
+                        <div class="col-lg-6 py-5">.
+                            <i class="fa-solid fa-quote-left" style="font-size: 40px"></i><br>
+                            {{ $testimoni->opini }}
+                            <div class="identity mt-3">
+                                <h6>{{ $testimoni->name }}<br>
+                                <span style="font-size: small; font-weight: 400">{{ $testimoni->address }}</span>
+                                </h6>
+                            </div>
                         </div>
                     </div>
                 </div>
-              </div>
+              @endforeach
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -212,20 +214,20 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> <!---->
     <section id="footer">
-        <div class="row footer-top"  style="border-bottom: 1px solid #fff">
+        <div class="row footer-top" style="border-bottom: 1px solid #fff">
             <div class="col-lg-6">
                 <div class="text">
-                    <h2 style="padding-top: 40px" class="heading" data-aos="fade-up" data-aos-once="true">Dapatkan pengalaman liburan yang istimewa di Vila Kota Batu</h2>
-                    <p class="desc pt-3">Nikmati liburan yang istimewa bersama keluarga Anda di Vila Mountain Oasis. Anda juga bisa mendapatkan diskon 50% untuk kunjungan berikutnya ketika memesan Vila Mountain Oasis sekarang juga!</p>
+                    <h2 style="padding-top: 40px" class="heading" data-aos="fade-up" data-aos-once="true">{{ $footer->heading }}</h2>
+                    <p class="desc pt-3">{{ $footer->subHeading }}</p>
                 </div>
                     <div class="booking pt-4 pb-5">
                         <a href="#"><i style="margin-right: 10px" class="fa-brands fa-whatsapp"></i> Booking Sekarang</a>
                    </div>
             </div>
             <div class="col-lg-6">
-                <img class="img-fluid" src="/assets/img/footer-img.png" alt="">
+                <img class="img-fluid" src="{{ asset('storage/' . $footer->image) }}" alt="">
             </div>
         </div>
             <div class="empty" style="height: 150px; background-color: #001524; border-bottom: 1px solid #22313C">
@@ -233,7 +235,12 @@
             <div class="footer-bottom">
                 <div class="row p-3">
                     <div class="col-lg-10">
-                        <p>Copyright © 2023 | Vila Mountain Oasis</p>
+                        <p>Copyright © 
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> 
+                            | {{ $footer->copyright }}
+                        </p>
                     </div>
                     <div class="col-lg d-flex justify-content-center justify-content-lg-start">
                         <ul class="list-unstyled d-flex">
@@ -244,5 +251,5 @@
                     </div>
                 </div>
             </div>            
-    </section>
+    </section> 
 @endsection

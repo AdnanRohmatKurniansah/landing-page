@@ -14,7 +14,7 @@ class FacilityController extends Controller
     public function index()
     {
         return view('dashboard.facility.index', [
-            'facilities' => Facility::all()
+            'facilities' => Facility::orderBy('id', 'desc')->get()
         ]);
     }
 

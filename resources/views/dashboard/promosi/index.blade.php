@@ -11,7 +11,6 @@
                 <div class="col-lg-6">
                     @if ($promosi === null)
                         <a class="btn btn-primary mb-3" href="/dashboard/promosi/create">Create</a>
-                        <a class="btn btn-success mb-3" href="/dashboard/promosi/1/edit">Edit</a>
                     @else 
                         <a class="btn btn-success mb-3" href="/dashboard/promosi/1/edit">Edit</a>
                     @endif
@@ -20,13 +19,13 @@
                     <p class="text-danger d-flex justify-content-end">{--hover component below and you will know what element it is--}</p>
                 </div>
             </div>
-            <div class="card" style="background-color: #F8F6F3;">
+            <div class="card">
                 <div class="d-flex align-items-end row">
                     <div class="col-12">
                         <div class="card-body">
-                            <section id="question">
+                            <section id="question" class="p-3"  style="background-color: #F8F6F3; border-radius: 10px">
                                 @if ($promosi !== null)   
-                                    <div class="row">
+                                    <div class="row p-3">
                                         <div class="heading col-lg-4 p-5 d-flex align-items-center" data-class="heading" style="background-color: black">
                                             <h3 style="color: #fff" data-aos="fade-up" data-aos-once="true">"{{ $promosi->heading }}"</h3>
                                         </div>

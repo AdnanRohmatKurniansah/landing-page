@@ -11,7 +11,6 @@
                 <div class="col-lg-6">
                     @if ($header === null)
                         <a class="btn btn-primary mb-3" href="/dashboard/header/create">Create</a>
-                        <a class="btn btn-success mb-3" href="/dashboard/header/1/edit">Edit</a>
                     @else 
                         <a class="btn btn-success mb-3" href="/dashboard/header/1/edit">Edit</a>
                     @endif
@@ -20,14 +19,14 @@
                     <p class="text-danger d-flex justify-content-end">{--hover component below and you will know what element it is--}</p>
                 </div>
             </div>
-            <div class="card" style="background-color: #1A4543;">
+            <div class="card">
                 <div class="d-flex align-items-end row">
                 <div class="col-12">
                     <div class="card-body">
-                        <section id="header">
+                        <section id="header" style="background-color: #1A4543; border-radius: 10px">
                             <div class="pt-5">
                                 @if ($header !== null)
-                                    <div class="row">
+                                    <div class="row p-3">
                                         <div class="col-lg-6" style="display: flex; flex-direction: column; justify-content: center; height: 100vh;">
                                             <div class="logo" data-class="logo">
                                                 <img src="{{ asset('storage/' . $header->logo) }}" width="150px" alt="">

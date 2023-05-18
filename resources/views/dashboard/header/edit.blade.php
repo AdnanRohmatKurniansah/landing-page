@@ -63,9 +63,9 @@
                                 <label for="image" class="form-label">Image Primary</label>
                                 <input type="hidden" name="oldImage" value="{{ $header->image }}">
                                 @if ($header->image)
-                                    <img src="{{ asset('storage/' . $header->image) }}" class="image-preview img-fluid mb-3 col-sm-5 d-block">
+                                    <img src="{{ asset('storage/' . $header->image) }}" class="img-preview img-fluid mb-3 col-sm-5 d-block">
                                 @else
-                                    <img class="image-preview img-fluid mb-3 col-sm-5">
+                                    <img class="img-preview img-fluid mb-3 col-sm-5">
                                 @endif
                               <input class="form-control @error('image') is-invalid @enderror" type="file" id="image"
                                 name="image" onchange="previewImage()">

@@ -44,25 +44,26 @@
           <div data-i18n="Basic">Facility</div>
         </a>
       </li>
-      <li class="menu-item">
+      <li class="menu-item {{ Request::is('dashboard/testimoni*') ? 'active' : '' }}">
+        <a href="/dashboard/testimoni" class="menu-link">
+          <i class='menu-icon tf-icons bx bx-group'></i>
+          <div data-i18n="Basic">Testimoni</div>
+        </a>
+      </li>
+      <li class="menu-item {{ Request::is('dashboard/footer*') ? 'active' : '' }}">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons bx bx-dock-top"></i>
-          <div data-i18n="Account Settings">Account Settings</div>
+          <div data-i18n="Account Settings">Footer</div>
         </a>
         <ul class="menu-sub">
-          <li class="menu-item">
-            <a href="pages-account-settings-account.html" class="menu-link">
-              <div data-i18n="Account">Account</div>
+          <li class="menu-item {{ Request::is('dashboard/footer*') ? 'active' : '' }}">
+            <a href="/dashboard/footer" class="menu-link">
+              <div data-i18n="Account">Manage Footer</div>
             </a>
           </li>
-          <li class="menu-item">
-            <a href="pages-account-settings-notifications.html" class="menu-link">
-              <div data-i18n="Notifications">Notifications</div>
-            </a>
-          </li>
-          <li class="menu-item">
-            <a href="pages-account-settings-connections.html" class="menu-link">
-              <div data-i18n="Connections">Connections</div>
+          <li class="menu-item {{ Request::is('dashboard/footer/medsos*') ? 'active' : '' }}">
+            <a href="/dashboard/medsos" class="menu-link">
+              <div data-i18n="Account">Footer's Medsos</div>
             </a>
           </li>
         </ul>

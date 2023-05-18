@@ -1,8 +1,12 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\HeaderController;
+use App\Http\Controllers\PromosiController;
+use App\Models\Facility;
 use App\Models\Header;
+use App\Models\Promosi;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,7 +22,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('landing', [
-        'header' => Header::first()
+        'header' => Header::first(),
+        'promosi' => Promosi::first(),
+        'facilities' => Facility::all()
     ]);
 });
 
@@ -34,5 +40,6 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function() {
         return view('dashboard.index');
     });
     Route::resource('/header', HeaderController::class);
-    
+    Route::resource('/promosi', PromosiControlleR::class);
+    Route::resource('/facility', FacilityController::class);
 });

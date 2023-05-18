@@ -42,7 +42,7 @@
       .note-editor.fullscreen {
         background-color: #fff; 
       }
-      .logo:hover::after, .diskon:hover::after, .heading:hover::after, .sub-heading:hover::after, .image:hover::after {
+      .logo:hover::after, .diskon:hover::after, .heading:hover::after, .sub-heading:hover::after, .image:hover::after, .text:hover::after{
           content: attr(data-class);
           position: absolute;
           bottom: 90%;

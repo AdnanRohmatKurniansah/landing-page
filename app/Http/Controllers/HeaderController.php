@@ -35,7 +35,7 @@ class HeaderController extends Controller
             'logo' => 'image|file|max:2048',
             'diskon' => 'required|max:3',
             'heading' => 'required|max:100',
-            'subHeading' => 'required|max:250',
+            'subHeading' => 'required',
             'image' => 'image|file|max:2048'
         ]);  
      

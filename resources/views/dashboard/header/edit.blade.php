@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-10 mb-4 order-0">
           <div class="header">
-            <h3>Edit Header</h3>
+            <h3 class="fw-bold">Edit Header</h3>
            </div>
             <div class="card">
                 <div class="d-flex align-items-end row">
@@ -32,7 +32,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="diskon" class="form-label">Diskon</label>
-                                <input diskon="text" class="form-control @error('diskon') is-invalid @enderror" id="diskon" 
+                                <input type="text" class="form-control @error('diskon') is-invalid @enderror" id="diskon" 
                                 name="diskon" required autofocus value="{{ old('diskon', $header->diskon) }}">
                                 @error('diskon')
                                     <div class="invalid-feedback">

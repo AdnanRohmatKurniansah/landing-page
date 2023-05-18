@@ -45,23 +45,12 @@
     <section id="question">
             <div class="row">
                 <div class="col-lg-4 p-5 d-flex align-items-center" style="background-color: black">
-                    <h3 style="color: #fff" data-aos="fade-up" data-aos-once="true">"Pilihan terbaik saat Anda butuh tempat berkumpul bersama orang terdekat seperti keluarga, teman dan komunitas"</h3>
+                    <h3 style="color: #fff" data-aos="fade-up" data-aos-once="true">"{{ $promosi->heading }}"</h3>
                 </div>
                 <div class="col"></div>
                 <div class="col-lg-7 pt-5">
                     <div class="text">
-                        <h3 style="font-weight: 500">Kamu Lagi Butuh Hal-Hal ini?</h3>
-                        <ul>
-                            <li>Cari tempat untuk berlibur dengan keluarga di Kota Batu?</li>
-                            <li>Cari tempat untuk berlibur dengan keluarga di Kota Batu?</li>
-                            <li>Cari tempat untuk berlibur dengan keluarga di Kota Batu?</li>
-                            <li>Cari tempat untuk berlibur dengan keluarga di Kota Batu?</li>
-                            <li>Cari tempat untuk berlibur dengan keluarga di Kota Batu?</li>
-                            <li>Cari tempat untuk berlibur dengan keluarga di Kota Batu?</li>
-                        </ul>
-                    </div>
-                    <div class="sub-text">
-                        <p style="font-size: 15px; color: #061212">Jika Anda menjawab “YA” dari semua pertanyaan di atas, maka Vila Mountain Oasis adalah jawaban terbaik untuk Anda. Dapatkan harga terbaik dan benefit menarik ketika Anda memesan di Vila Mountain Oasis sekarang juga!</p>
+                        {!! $promosi->text !!}
                     </div>
                 </div>
                 <div class="booking mt-2 pb-5 d-flex justify-content-center">
@@ -113,15 +102,17 @@
     <section id="facility">
         <h2 class="d-flex justify-content-center mb-4" data-aos="fade-up" data-aos-once="true" style="font-weight: 500; margin-top: 60px">Fasilitas Unggulan Villa Mountain Oasis</h2>
         <div class="row">
+            @foreach ($facilities as $facility)   
             <div class="col-lg-3">
                 <div class="box p-2" data-aos="fade-up" data-aos-once="true" data-aos-duration="3000">
-                    <img src="/assets/img/facility.jpg" class="card-img-top" alt="...">
+                    <img src="{{ asset('storage/' . $facility->image) }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h4>Ruang Tamu Luas</h4>
-                      <p class="card-text">Dilengkapi dengan LED TV, sofa, meja dan kursi yang nyaman.</p>
+                      <h4>{{ $facility->name }}</h4>
+                      <p class="card-text">{{ $facility->desc }}</p>
                     </div>
                   </div>
             </div>
+            @endforeach
         </div>
     </section>
     <section id="testimonial">

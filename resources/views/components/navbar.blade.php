@@ -17,7 +17,7 @@
     <ul class="menu-inner py-1">
       <!-- Dashboard -->
       <li class="menu-item {{ Request::is('dashboard') ? 'active' : ''}}">
-        <a href="index.html" class="menu-link">
+        <a href="/dashboard" class="menu-link">
           <i class="menu-icon tf-icons bx bx-home-circle"></i>
           <div data-i18n="Analytics">Dashboard</div>
         </a>
@@ -30,6 +30,18 @@
         <a href="/dashboard/header" class="menu-link">
           <i class='menu-icon tf-icons bx bxs-image'></i>
           <div data-i18n="Basic">Header</div>
+        </a>
+      </li>
+      <li class="menu-item {{ Request::is('dashboard/promosi*') ? 'active' : '' }}">
+        <a href="/dashboard/promosi" class="menu-link">
+          <i class='menu-icon tf-icons bx bx-clipboard'></i>
+          <div data-i18n="Basic">Promosi</div>
+        </a>
+      </li>
+      <li class="menu-item {{ Request::is('dashboard/facility*') ? 'active' : '' }}">
+        <a href="/dashboard/facility" class="menu-link">
+          <i class='menu-icon tf-icons bx bxs-package'></i>
+          <div data-i18n="Basic">Facility</div>
         </a>
       </li>
       <li class="menu-item">

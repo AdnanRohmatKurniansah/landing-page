@@ -59,7 +59,7 @@
             </div>
             <div class="modal-body">
               <ol>
-                <li>Before adding or editing you should read the documentation of <a href="https://boxicons.com/">boxicons</a></li>
+                <li>Before adding or editing you should read the documentation of <a target="_blank" href="https://boxicons.com/">boxicons</a></li>
                 <li>Take the last name of the icon</li>
                 <span>Example: </span>
                 <img class="img-fluid" src="/assets/img/example.png" alt="">

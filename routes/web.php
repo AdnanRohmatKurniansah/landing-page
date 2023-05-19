@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BenefitController;
+use App\Http\Controllers\DaftarController;
 use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\FooterController;
 use App\Http\Controllers\HeaderController;
@@ -53,9 +55,11 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function() {
     Route::get('/add', [AuthController::class, 'add']);
     Route::post('/add', [AuthController::class, 'store']);
     Route::resource('/header', HeaderController::class);
-    Route::resource('/promosi', PromosiControlleR::class);
+    Route::resource('/promosi', PromosiController::class);
     Route::resource('/facility', FacilityController::class);
     Route::resource('/testimoni', TestimoniController::class);
     Route::resource('/footer', FooterController::class);
     Route::resource('/sosmed', SosmedController::class);
+    Route::resource('/benefit', BenefitController::class);
+    Route::resource('/daftar', DaftarController::class);
 });

@@ -38,6 +38,24 @@
           <div data-i18n="Basic">Promosi</div>
         </a>
       </li>
+      <li class="menu-item {{ Request::is('dashboard/benefit*') || Request::is('dashboard/daftar*') ? 'active' : '' }}">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
+          <i class='menu-icon tf-icons bx bx-purchase-tag-alt'></i>
+          <div data-i18n="Account Settings">Benefit</div>
+        </a>
+        <ul class="menu-sub">
+          <li class="menu-item {{ Request::is('dashboard/benefit*') ? 'active' : '' }}">
+            <a href="/dashboard/benefit" class="menu-link">
+              <div data-i18n="Account">Manage Benefit</div>
+            </a>
+          </li>
+          <li class="menu-item {{ Request::is('dashboard/daftar*')? 'active' : '' }}">
+            <a href="/dashboard/daftar" class="menu-link">
+              <div data-i18n="Account">Lists's Benefit</div>
+            </a>
+          </li>
+        </ul>
+      </li>
       <li class="menu-item {{ Request::is('dashboard/facility*') ? 'active' : '' }}">
         <a href="/dashboard/facility" class="menu-link">
           <i class='menu-icon tf-icons bx bxs-package'></i>

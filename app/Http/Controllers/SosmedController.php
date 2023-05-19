@@ -12,7 +12,7 @@ class SosmedController extends Controller
      */
     public function index()
     {
-        return view('dashboard.sosmed.index', [
+        return view('dashboard.footer.sosmed.index', [
             'sosmeds' => Sosmed::all()
         ]);
     }
@@ -22,7 +22,7 @@ class SosmedController extends Controller
      */
     public function create()
     {
-        return view('dashboard.sosmed.create');
+        return view('dashboard.footer.sosmed.create');
     }
 
     /**
@@ -53,7 +53,7 @@ class SosmedController extends Controller
      */
     public function edit(Sosmed $sosmed)
     {
-        return view('dashboard.sosmed.edit', [
+        return view('dashboard.footer.sosmed.edit', [
             'sosmed' => $sosmed
         ]);
     }

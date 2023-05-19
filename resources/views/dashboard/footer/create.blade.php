@@ -53,6 +53,18 @@
                                     </div>
                                 @enderror
                               </div>
+                              {{-- <div class="mb-3">
+                                <label for="sosmed" class="form-label">Sosmed</label>
+                                <select id="#select-option" class="form-select" name="sosmed_id" multiple="multiple">
+                                  @foreach ($sosmeds as $sosmed)
+                                    @if(old('sosmed_id') == $sosmed->id)
+                                      <option value="{{ $sosmed->id }}" selected>{{ $sosmed->name }}</option>
+                                    @else
+                                       <option value="{{ $sosmed->id }}">{{ $sosmed->name }}</option>
+                                    @endif
+                                  @endforeach
+                                </select>
+                              </div>  --}}
                             <button type="submit" class="btn btn-primary">Add Footer</button>
                           </form> 
                     </div>
@@ -75,6 +87,19 @@
         imgPreview.src = oFREvent.target.result;
       }
     }
+        $('#select-option').multiselect({
+            includeSelectAllOption: true, // add select all option as usual
+            optionClass: function(element) {
+                var value = $(element).val();
+ 
+                if (value%2 == 0) {
+                    return 'even';
+                }
+                else {
+                    return 'odd';
+                }
+            }
+        });
 
     </script>
 

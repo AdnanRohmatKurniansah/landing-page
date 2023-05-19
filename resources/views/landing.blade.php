@@ -244,9 +244,9 @@
                     </div>
                     <div class="col-lg d-flex justify-content-center justify-content-lg-start">
                         <ul class="list-unstyled d-flex">
-                            <li class="mx-2"><i class="fa-brands fa-twitter"></i></li>
-                            <li class="mx-2"><i class="fa-brands fa-facebook"></i></li>
-                            <li class="mx-2"><i class="fa-brands fa-instagram"></i></li>
+                            @foreach ($sosmeds as $sosmed)  
+                                <li class="mx-2"><a href="{{ $sosmed->link }}"><i class="fa-brands fa-{{ $sosmed->name }}"></i></a></li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>

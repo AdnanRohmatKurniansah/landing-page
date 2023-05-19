@@ -59,6 +59,18 @@
                                   </div>
                               @enderror
                             </div>
+                            {{-- <div class="mb-3">
+                              <label for="sosmed" class="form-label">Sosmed</label>
+                              <select class="form-select" name="sosmed_id" multiple>
+                                @foreach ($sosmeds as $sosmed)
+                                  @if(old('sosmed_id', $sosmed->sosmed_id) == $sosmed->id)
+                                    <option value="{{ $sosmed->id }}" selected>{{ $sosmed->name }}</option>
+                                  @else
+                                     <option value="{{ $sosmed->id }}">{{ $sosmed->name }}</option>
+                                  @endif
+                                @endforeach
+                              </select>
+                            </div>  --}}
                             <button type="submit" class="btn btn-primary">Edit Footer</button>
                           </form> 
                     </div>

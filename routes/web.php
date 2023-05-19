@@ -5,11 +5,13 @@ use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\FooterController;
 use App\Http\Controllers\HeaderController;
 use App\Http\Controllers\PromosiController;
+use App\Http\Controllers\SosmedController;
 use App\Http\Controllers\TestimoniController;
 use App\Models\Facility;
 use App\Models\Footer;
 use App\Models\Header;
 use App\Models\Promosi;
+use App\Models\Sosmed;
 use App\Models\Testimoni;
 use Illuminate\Support\Facades\Route;
 
@@ -30,7 +32,8 @@ Route::get('/', function () {
         'promosi' => Promosi::first(),
         'facilities' => Facility::orderBy('id', 'desc')->get(),
         'testimonies' => Testimoni::orderBy('id', 'desc')->get(),
-        'footer' => Footer::first()
+        'footer' => Footer::first(),
+        'sosmeds' => Sosmed::all()
     ]);
 });
 
@@ -54,5 +57,5 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function() {
     Route::resource('/facility', FacilityController::class);
     Route::resource('/testimoni', TestimoniController::class);
     Route::resource('/footer', FooterController::class);
-    
+    Route::resource('/sosmed', SosmedController::class);
 });

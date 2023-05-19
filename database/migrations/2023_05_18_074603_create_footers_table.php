@@ -17,7 +17,12 @@ return new class extends Migration
             $table->string('subHeading');
             $table->text('image');
             $table->string('copyright');
+            // $table->unsignedBigInteger('sosmed_id');
+
+            // $table->foreign('sosmed_id')->references('id')->on('sosmeds')->onDelete('cascade')->onUpdate('cascade');
+
             $table->timestamps();
+
         });
     }
 

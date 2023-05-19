@@ -38,11 +38,13 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/assets/summernote-lite.min.css">
     <script src="/assets/summernote-lite.min.js"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap-multiselect@0.9.16/dist/js/bootstrap-multiselect.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-multiselect@0.9.16/dist/css/bootstrap-multiselect.min.css"> --}}
     <style>
       .note-editor.fullscreen {
         background-color: #fff; 
       }
-      .logo:hover::after, .diskon:hover::after, .heading:hover::after, .sub-heading:hover::after, .image:hover::after, .text:hover::after, .copyright:hover::after, .medsos:hover::after{
+      .logo:hover::after, .diskon:hover::after, .heading:hover::after, .sub-heading:hover::after, .image:hover::after, .text:hover::after, .copyright:hover::after, .sosmed:hover::after{
           content: attr(data-class);
           position: absolute;
           bottom: 90%;

@@ -50,11 +50,11 @@
                                                     </script> 
                                                 | {{ $footer->copyright }}</p>
                                             </div>
-                                            <div class="medsos col-lg d-flex justify-content-center justify-content-lg-start" data-class="medsos">
+                                            <div class="sosmed col-lg d-flex justify-content-center justify-content-lg-start" data-class="sosmed">
                                                 <ul class="list-unstyled d-flex">
-                                                    <li class="mx-2"><a style="color: #fff" href="#"><i class='bx bxl-twitter'></a></i></li>
-                                                    <li class="mx-2"><a style="color: #fff" href="#"><i class='bx bxl-facebook-circle' ></a></i></li>
-                                                    <li class="mx-2"><a style="color: #fff" href="#"><i class='bx bxl-instagram' ></i></a></li>
+                                                    @foreach ($sosmeds as $sosmed)
+                                                        <li class="mx-2"><a style="color: #fff" href="{{ $sosmed->link }}"><i class='bx bxl-{{ $sosmed->name }}'></a></i></li>
+                                                    @endforeach
                                                 </ul>
                                             </div>
                                         </div>

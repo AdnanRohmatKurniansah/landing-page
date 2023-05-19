@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Footer;
+use App\Models\Sosmed;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -14,7 +15,8 @@ class FooterController extends Controller
     public function index()
     {
         return view('dashboard.footer.index', [
-            'footer' => Footer::first()
+            'footer' => Footer::first(),
+            'sosmeds' => Sosmed::all()
         ]);
     }
 

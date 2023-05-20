@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Benefit;
+use App\Models\Daftar;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -14,7 +15,8 @@ class BenefitController extends Controller
     public function index()
     {
         return view('dashboard.benefit.index', [
-            'benefit' => Benefit::first()
+            'benefit' => Benefit::first(),
+            'daftars' => Daftar::all()
         ]);
     }
 

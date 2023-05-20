@@ -2,12 +2,12 @@
 
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
-        <h4 class="fw-bold py-3 mb-2">Manage Sosmed</h4>
+        <h4 class="fw-bold py-3 mb-2">Manage Feature</h4>
 
         <!-- Basic Bootstrap Table -->
         <div class="row">
           <div class="col">
-            <a class="btn btn-primary mb-3" href="/dashboard/sosmed/create">Create</a>
+            <a class="btn btn-primary mb-3" href="/dashboard/features/create">Create</a>
           </div>
           <div class="col d-flex justify-content-end">
             <button type="button" class="btn btn-success mb-3 " data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -22,19 +22,19 @@
                 <tr>
                   <th>#</th>
                   <th>Name</th>
-                  <th>Preview</th>
+                  <th>Icon</th>
                   <th>Actions</th>
                 </tr>
               </thead>
               <tbody class="table-border-bottom-0">
-                @foreach ($sosmeds as $sosmed) 
+                @foreach ($features as $feature) 
                   <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $sosmed->name }}</td>
-                    <td><i style="font-size: 40px" class="fa-brands fa-{{ $sosmed->name }}"></i></td>
+                    <td>{{ $feature->name }}</td>
+                    <td><i class="fa-solid fa-{{ $feature->icon }}" style="font-size: 40px" ></i></td>
                     <td class="d-flex p-2">
-                        <a href="/dashboard/sosmed/{{ $sosmed->id }}/edit" class="badge bg-success" style="font-size: 18px; margin-right: 5px"><i class="bx bx-edit-alt me-1"></i></a>
-                        <form action="/dashboard/sosmed/{{ $sosmed->id }}" method="post">
+                        <a href="/dashboard/features/{{ $feature->id }}/edit" class="badge bg-success" style="font-size: 18px; margin-right: 5px"><i class="bx bx-edit-alt me-1"></i></a>
+                        <form action="/dashboard/features/{{ $feature->id }}" method="post">
                           @method('delete')
                           @csrf
                             <button class="badge bg-danger border-0" onclick="return confirm('Are you sure?')" style="font-size: 18px" type="submit"><i class="bx bx-trash me-1"></i></button>

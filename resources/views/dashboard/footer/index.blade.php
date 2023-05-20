@@ -53,7 +53,7 @@
                                             <div class="sosmed col-lg d-flex justify-content-center justify-content-lg-start" data-class="sosmed">
                                                 <ul class="list-unstyled d-flex">
                                                     @foreach ($sosmeds as $sosmed)
-                                                        <li class="mx-2"><a style="color: #fff" href="{{ $sosmed->link }}"><i class='bx bxl-{{ $sosmed->name }}'></a></i></li>
+                                                        <li class="mx-2"><a style="color: #fff" href="{{ $sosmed->link }}"><i class="fa-brands fa-{{ $sosmed->name }}"></i></li>
                                                     @endforeach
                                                 </ul>
                                             </div>

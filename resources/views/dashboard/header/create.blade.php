@@ -26,7 +26,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="diskon" class="form-label">Diskon</label>
-                                <input diskon="text" class="form-control @error('diskon') is-invalid @enderror" id="diskon" 
+                                <input type="text" class="form-control @error('diskon') is-invalid @enderror" id="diskon" 
                                 name="diskon" required autofocus value="{{ old('diskon') }}">
                                 @error('diskon')
                                     <div class="invalid-feedback">

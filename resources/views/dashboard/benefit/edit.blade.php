@@ -17,7 +17,7 @@
                             <div class="mb-3">
                                 <label for="heading" class="form-label">Heading</label>
                                 <input type="text" class="form-control @error('heading') is-invalid @enderror" id="heading" 
-                                name="heading" required autofocus value="{{ old('heading', $header->heading) }}">
+                                name="heading" required autofocus value="{{ old('heading', $benefit->heading) }}">
                                 @error('heading')
                                     <div class="invalid-feedback">
                                       {{ $message }}

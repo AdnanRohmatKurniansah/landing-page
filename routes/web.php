@@ -4,8 +4,10 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BenefitController;
 use App\Http\Controllers\DaftarController;
 use App\Http\Controllers\FacilityController;
+use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\FooterController;
 use App\Http\Controllers\HeaderController;
+use App\Http\Controllers\PromoController;
 use App\Http\Controllers\PromosiController;
 use App\Http\Controllers\SosmedController;
 use App\Http\Controllers\TestimoniController;
@@ -62,4 +64,6 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function() {
     Route::resource('/sosmed', SosmedController::class);
     Route::resource('/benefit', BenefitController::class);
     Route::resource('/daftar', DaftarController::class);
+    Route::resource('/promo', PromoController::class);
+    Route::resource('/features', FeatureController::class);
 });

@@ -68,6 +68,26 @@
           <div data-i18n="Basic">Testimoni</div>
         </a>
       </li>
+      <li class="menu-item {{ Request::is('dashboard/promo*') || Request::is('dashboard/features*') ? 'active' : '' }}">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
+          <i class='menu-icon tf-icons bx bxs-discount'></i>
+          <div data-i18n="Account Settings">Promo</div>
+        </a>
+        <ul class="menu-sub">
+          <li class="menu-item {{ Request::is('dashboard/promo*') ? 'active' : '' }}">
+            <a href="/dashboard/promo" class="menu-link">
+              <div data-i18n="Account">Manage Promo</div>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu-sub">
+          <li class="menu-item {{ Request::is('dashboard/features*') ? 'active' : '' }}">
+            <a href="/dashboard/features" class="menu-link">
+              <div data-i18n="Account">Feature's Promo</div>
+            </a>
+          </li>
+        </ul>
+      </li>
       <li class="menu-item {{ Request::is('dashboard/footer*') || Request::is('dashboard/sosmed*') ? 'active' : '' }}">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons bx bx-dock-top"></i>

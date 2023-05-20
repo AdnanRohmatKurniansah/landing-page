@@ -27,38 +27,52 @@
                             <section class="p-3" id="benefit" style="background-color: #F4F4F4; border-radius: 10px">
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <h1 class="heading mb-3" data-class="heading" data-aos="fade-up" data-aos-once="true" style="font-weight: 500">Benefit saat Menyewa Vila</h1>
-                                        <p class="desc" data-class="desc">Terletak di Batu, Jawa Timur Kami menyajikan Banyak sekali keuntungan yang bisa Anda dapatkan jika Anda menginap di Vila Mountain Oasis.  Seperti hal-hal berikut ini :</p>
-                                        <div class="list row mt-4" data-class="list">
-                                            <div class="col-lg-2 mb-2">
-                                                <img class="img-fluid" src="/assets/img/tabungan.png" alt="">
+                                        <h1 class="heading mb-3" data-class="heading" data-aos="fade-up" data-aos-once="true" style="font-weight: 500">{{ $benefit->heading }}</h1>
+                                        <p class="desc" data-class="desc">{{ $benefit->desc }}</p>
+                                        @if ($daftars->count())
+                                            @foreach ($daftars as $daftar) 
+                                                <div class="list row mt-4" data-class="list">
+                                                    <div class="col-lg-2 mb-2">
+                                                        <img class="img-fluid" src="{{ asset('storage/' . $daftar->image) }}" alt="">
+                                                    </div>
+                                                    <div class="col-lg-10">
+                                                        <h6 data-aos="fade-up" data-aos-once="true" >{{ $daftar->title }}</h6>
+                                                        <p data-aos="fade-up" data-aos-once="true">{{ $daftar->desc }}</p>
+                                                    </div>
+                                                </div>
+                                            @endforeach 
+                                        @else
+                                            <div class="list row mt-4" data-class="list">
+                                                <div class="col-lg-2 mb-2">
+                                                    <img class="img-fluid" src="/assets/img/tabungan.png" alt="">
+                                                </div>
+                                                <div class="col-lg-10">
+                                                    <h6 data-aos="fade-up" data-aos-once="true" >MENGHEMAT UANG</h6>
+                                                    <p data-aos="fade-up" data-aos-once="true">Nikmati harga lebih ekonomis dibandingkan dengan penginapan di hotel ketika Anda menyewa Vila Mountain Oasis.</p>
+                                                </div>
                                             </div>
-                                            <div class="col-lg-10">
-                                                <h6 data-aos="fade-up" data-aos-once="true" >MENGHEMAT UANG</h6>
-                                                <p data-aos="fade-up" data-aos-once="true">Nikmati harga lebih ekonomis dibandingkan dengan penginapan di hotel ketika Anda menyewa Vila Mountain Oasis.</p>
+                                            <div class="list row mt-4" data-class="list">
+                                                <div class="col-lg-2 mb-2">
+                                                    <img class="img-fluid" src="/assets/img/tabungan.png" alt="">
+                                                </div>
+                                                <div class="col-lg-10">
+                                                    <h6 data-aos="fade-up" data-aos-once="true" >MENGHEMAT UANG</h6>
+                                                    <p data-aos="fade-up" data-aos-once="true">Nikmati harga lebih ekonomis dibandingkan dengan penginapan di hotel ketika Anda menyewa Vila Mountain Oasis.</p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row mt-4">
-                                            <div class="col-lg-2 mb-2">
-                                                <img class="img-fluid" src="/assets/img/tabungan.png" alt="">
+                                            <div class="list row mt-4" data-class="list">
+                                                <div class="col-lg-2 mb-2">
+                                                    <img class="img-fluid" src="/assets/img/tabungan.png" alt="">
+                                                </div>
+                                                <div class="col-lg-10">
+                                                    <h6 data-aos="fade-up" data-aos-once="true" >MENGHEMAT UANG</h6>
+                                                    <p data-aos="fade-up" data-aos-once="true">Nikmati harga lebih ekonomis dibandingkan dengan penginapan di hotel ketika Anda menyewa Vila Mountain Oasis.</p>
+                                                </div>
                                             </div>
-                                            <div class="col-lg-10">
-                                                <h6 data-aos="fade-up" data-aos-once="true" >MENGHEMAT UANG</h6>
-                                                <p data-aos="fade-up" data-aos-once="true">Nikmati harga lebih ekonomis dibandingkan dengan penginapan di hotel ketika Anda menyewa Vila Mountain Oasis.</p>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-4">
-                                            <div class="col-lg-2 mb-2">
-                                                <img class="img-fluid" src="/assets/img/tabungan.png" alt="">
-                                            </div>
-                                            <div class="col-lg-10">
-                                                <h6 data-aos="fade-up" data-aos-once="true" >MENGHEMAT UANG</h6>
-                                                <p data-aos="fade-up" data-aos-once="true">Nikmati harga lebih ekonomis dibandingkan dengan penginapan di hotel ketika Anda menyewa Vila Mountain Oasis.</p>
-                                            </div>
-                                        </div>
+                                        @endif
                                     </div>
                                     <div class="image col-lg-6" data-class="image">
-                                        <img class="img-fluid h-100" src="/assets/img/villa.jpg" alt="">
+                                        <img class="img-fluid h-100" src="{{ asset('storage/' . $benefit->image) }}" alt="">
                                     </div>
                                 </div>
                                 <div class="booking mt-5 pb-5 d-flex justify-content-center">

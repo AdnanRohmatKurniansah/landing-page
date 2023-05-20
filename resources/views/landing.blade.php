@@ -98,7 +98,7 @@
         <div class="booking mt-5 pb-5 d-flex justify-content-center">
             <a href="#"><i style="margin-right: 10px" class="fa-brands fa-whatsapp"></i> Booking Sekarang</a>
         </div>
-    </section> <!---->
+    </section>
     <section id="facility">
         <h2 class="d-flex justify-content-center mb-4" data-aos="fade-up" data-aos-once="true" style="font-weight: 500; margin-top: 60px">Fasilitas Unggulan Villa Mountain Oasis</h2>
         <div class="row">

@@ -50,11 +50,11 @@
                                     </div>
                                 @enderror
                               </div>
-                            <div class="mb-3">
+                              <div class="mb-3">
                                 <label for="subHeading" class="form-label">subHeading</label>
-                                <textarea id="editor" class="summernote @error('subHeading') is-invalid @enderror" name="subHeading">{{ old('subHeading', $header->subHeading) }}</textarea>
+                                <textarea class="form-control @error('subHeading') is-invalid @enderror" name="subHeading" id="subHeading" cols="30" rows="5" required autofocus>{{ old('subHeading', $header->subHeading) }}</textarea>
                                 @error('subHeading')
-                                    <div class="invalid-feedback">
+                                    <div class="invalid-feedback">  
                                       {{ $message }}
                                     </div>
                                 @enderror

@@ -3,46 +3,12 @@
 @section('content')
 <div class="container-xxl flex-grow-1 container-p-y">
     <div class="row">
-      <div class="col-lg-8 mb-4 order-0">
+      <div class="col-lg-4 mb-3">
         <div class="card">
-          <div class="d-flex align-items-end row">
-            <div class="col-sm-7">
-              <div class="card-body">
-                <h5 class="card-title text-primary">Congratulations John! 🎉</h5>
-                <p class="mb-4">
-                  You have done <span class="fw-bold">72%</span> more sales today. Check your new badge in
-                  your profile.
-                </p>
-
-                <a href="javascript:;" class="btn btn-sm btn-outline-primary">View Badges</a>
-              </div>
-            </div>
-            <div class="col-sm-5 text-center text-sm-left">
-              <div class="card-body pb-0 px-0 px-md-4">
-                <img
-                  src="../assets/img/illustrations/man-with-laptop-light.png"
-                  height="140"
-                  alt="View Badge User"
-                  data-app-dark-img="illustrations/man-with-laptop-dark.png"
-                  data-app-light-img="illustrations/man-with-laptop-light.png"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 order-1">
-        <div class="row">
-          <div class="col-lg-6 col-md-12 col-6 mb-4">
-            <div class="card">
               <div class="card-body">
                 <div class="card-title d-flex align-items-start justify-content-between">
                   <div class="avatar flex-shrink-0">
-                    <img
-                      src="../assets/img/icons/unicons/chart-success.png"
-                      alt="chart success"
-                      class="rounded"
-                    />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" id="box"><g transform="translate(0 -1004.362)"><circle cx="24" cy="1028.362" r="24" fill="#50b748"></circle><path fill="#fff" fill-rule="evenodd" d="M203.49 921.358a.5.5 0 0 0-.343.15l-3.969 3.971-.03.03a.5.5 0 0 0-.024.021.5.5 0 0 0-.012.014.5.5 0 0 0-.004.006.5.5 0 0 0-.107.402v15.91a.5.5 0 0 0 .5.5h12.1c.255.502.588.974 1.007 1.393a5.512 5.512 0 0 0 7.783-.002 5.507 5.507 0 0 0 0-7.78v-.001a5.538 5.538 0 0 0-.39-.352v-13.758a.5.5 0 0 0-.5-.498v-.002h-15.93a.5.5 0 0 0-.08-.004zm.218 1.004h14.586l-3 3h-14.586l3-3zm15.293.707v11.895a5.526 5.526 0 0 0-3-.579v-8.316l3-3zm-19 3.293h15v8.211a5.463 5.463 0 0 0-2.393 1.398 5.506 5.506 0 0 0-1.398 5.391H200v-15zm16.5 8.994a4.49 4.49 0 0 1 3.183 1.322 4.494 4.494 0 0 1 0 6.368 4.496 4.496 0 0 1-6.369.002 4.499 4.499 0 0 1 0-6.371 4.489 4.489 0 0 1 3.186-1.32zm-15.5.006v1h6v-1h-6zm0 2v1h4v-1h-4zm18.238.502a.5.5 0 0 0-.313.106l-3.576 2.705-1.195-1.45a.5.5 0 1 0-.772.637l1.5 1.819a.5.5 0 0 0 .688.082l3.959-2.997a.5.5 0 0 0-.291-.902z" color="#000" font-family="sans-serif" font-weight="400" overflow="visible" transform="translate(-185.994 96.004)" style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal"></path></g></svg>
                   </div>
                   <div class="dropdown">
                     <button
@@ -56,482 +22,90 @@
                       <i class="bx bx-dots-vertical-rounded"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt3">
-                      <a class="dropdown-item" href="javascript:void(0);">View More</a>
-                      <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                      <a class="dropdown-item" href="/dashboard/facility">View More</a>
                     </div>
                   </div>
                 </div>
-                <span class="fw-semibold d-block mb-1">Profit</span>
-                <h3 class="card-title mb-2">$12,628</h3>
-                <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +72.80%</small>
+                <span class="fw-semibold d-block mb-1">Facility</span>
+                <h3 class="card-title mb-2">{{ $facility }}</h3>
               </div>
             </div>
-          </div>
-          <div class="col-lg-6 col-md-12 col-6 mb-4">
-            <div class="card">
-              <div class="card-body">
-                <div class="card-title d-flex align-items-start justify-content-between">
-                  <div class="avatar flex-shrink-0">
-                    <img
-                      src="../assets/img/icons/unicons/wallet-info.png"
-                      alt="Credit Card"
-                      class="rounded"
-                    />
-                  </div>
-                  <div class="dropdown">
-                    <button
-                      class="btn p-0"
-                      type="button"
-                      id="cardOpt6"
-                      data-bs-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <i class="bx bx-dots-vertical-rounded"></i>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt6">
-                      <a class="dropdown-item" href="javascript:void(0);">View More</a>
-                      <a class="dropdown-item" href="javascript:void(0);">Delete</a>
-                    </div>
-                  </div>
-                </div>
-                <span>Sales</span>
-                <h3 class="card-title text-nowrap mb-1">$4,679</h3>
-                <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +28.42%</small>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-      <!-- Total Revenue -->
-      <div class="col-12 col-lg-8 order-2 order-md-3 order-lg-2 mb-4">
+      <div class="col-lg-4 mb-3">
         <div class="card">
-          <div class="row row-bordered g-0">
-            <div class="col-md-8">
-              <h5 class="card-header m-0 me-2 pb-3">Total Revenue</h5>
-              <div id="totalRevenueChart" class="px-2"></div>
-            </div>
-            <div class="col-md-4">
-              <div class="card-body">
-                <div class="text-center">
-                  <div class="dropdown">
-                    <button
-                      class="btn btn-sm btn-outline-primary dropdown-toggle"
-                      type="button"
-                      id="growthReportId"
-                      data-bs-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      2022
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="growthReportId">
-                      <a class="dropdown-item" href="javascript:void(0);">2021</a>
-                      <a class="dropdown-item" href="javascript:void(0);">2020</a>
-                      <a class="dropdown-item" href="javascript:void(0);">2019</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="growthChart"></div>
-              <div class="text-center fw-semibold pt-3 mb-2">62% Company Growth</div>
-
-              <div class="d-flex px-xxl-4 px-lg-2 p-4 gap-xxl-3 gap-lg-1 gap-3 justify-content-between">
-                <div class="d-flex">
-                  <div class="me-2">
-                    <span class="badge bg-label-primary p-2"><i class="bx bx-dollar text-primary"></i></span>
-                  </div>
-                  <div class="d-flex flex-column">
-                    <small>2022</small>
-                    <h6 class="mb-0">$32.5k</h6>
-                  </div>
-                </div>
-                <div class="d-flex">
-                  <div class="me-2">
-                    <span class="badge bg-label-info p-2"><i class="bx bx-wallet text-info"></i></span>
-                  </div>
-                  <div class="d-flex flex-column">
-                    <small>2021</small>
-                    <h6 class="mb-0">$41.2k</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--/ Total Revenue -->
-      <div class="col-12 col-md-8 col-lg-4 order-3 order-md-2">
-        <div class="row">
-          <div class="col-6 mb-4">
-            <div class="card">
               <div class="card-body">
                 <div class="card-title d-flex align-items-start justify-content-between">
                   <div class="avatar flex-shrink-0">
-                    <img src="../assets/img/icons/unicons/paypal.png" alt="Credit Card" class="rounded" />
+                    <svg xmlns="http://www.w3.org/2000/svg"  width="48" height="48"  data-name="Layer 1" viewBox="0 0 64 64" id="community"><path fill="#2d3142" d="M43,9.86V9a6,6,0,0,1,6-6h2a6,6,0,0,1,6,6v.86Z"></path><path fill="#fec3a6" d="M51.85,20.19l1.44-.95A6.012,6.012,0,0,0,56,14.22v-.69a1.987,1.987,0,0,0,2-1.97,1.96,1.96,0,0,0-1-1.7,2,2,0,0,0-1-.27l-.77-1.51a2.041,2.041,0,0,0-3.21-.52l-.61.58a2.048,2.048,0,0,1-2.82,0l-.61-.58a2.041,2.041,0,0,0-3.21.52L44,9.59a2,2,0,0,0-1,.27,1.96,1.96,0,0,0-1,1.7,1.987,1.987,0,0,0,2,1.97v.69A5.949,5.949,0,0,0,46.39,19Z"></path><path fill="#9b9c9b" d="M49,25l1.5,1,2.22-4.44L54,19h3a4,4,0,0,1,4,4v8H39V23a4,4,0,0,1,4-4h3Z"></path><path fill="#2d3142" d="M7,9.86V9a6,6,0,0,1,6-6h2a6,6,0,0,1,6,6v.86Z"></path><path fill="#fec3a6" d="M17.61,19A5.949,5.949,0,0,0,20,14.22v-.69a1.987,1.987,0,0,0,2-1.97,1.96,1.96,0,0,0-1-1.7,2,2,0,0,0-1-.27l-.77-1.51a2.041,2.041,0,0,0-3.21-.52l-.61.58a2.048,2.048,0,0,1-2.82,0l-.61-.58a2.041,2.041,0,0,0-3.21.52L8,9.59a2,2,0,0,0-1,.27,1.96,1.96,0,0,0-1,1.7,1.987,1.987,0,0,0,2,1.97v.69a6.012,6.012,0,0,0,2.71,5.02l1.44.95Z"></path><path fill="#9b9c9b" d="M12,31H25V23a4,4,0,0,0-4-4H18l-3,6-1.5,1-2.22-4.44L10,19H7a4,4,0,0,0-4,4v8h9Z"></path><path fill="#2d3142" d="M11,30.73v3.78a5.993,5.993,0,0,1-1.76,4.25L7,41l.88-.51.02-.02,2.52-1.42.01-.01L14,37l4,2,4-2,3.01,1.72.56.32.01.01.54.31.89.5,1.09.61.02.02-.26-.63-1.32-1.34-.25-.3c-.1-.12-.19-.25-.28-.38l-.57-1.09a4.287,4.287,0,0,1-.19-.54,6.228,6.228,0,0,1-.15-.62,3.109,3.109,0,0,1-.06-.44,4.49,4.49,0,0,1-.04-.64V23a4,4,0,0,0-4-4H15a3.961,3.961,0,0,0-1.2.18,4.234,4.234,0,0,0-.69.3,3.985,3.985,0,0,0-.96.71,3.859,3.859,0,0,0-.87,1.37c-.04.11-.08.23-.12.34A3.66,3.66,0,0,0,11,23v7.73Z"></path><path fill="#fec3a6" d="M24,27h0a4,4,0,0,0-4-4H18l-6,4a2,2,0,0,0,0,4v.789a6,6,0,0,0,2.672,4.992L18,39l3.328-2.219A6,6,0,0,0,24,31.789V31a2,2,0,0,0,0-4Z"></path><path fill="#7ccdf4" d="M25,39l-3-2c0,2.21-1.79,6-4,6s-4-3.79-4-6l-3,2a3.642,3.642,0,0,0-.57.04l-.01.01A3.949,3.949,0,0,0,7.9,40.47l-.02.02a5.056,5.056,0,0,0-.42.64A4.041,4.041,0,0,0,7,43v4H26.69l1.85-5.87h-.01l-.41-.64-.02-.02-.63-.61-1.26-.67H26.2l-.62-.14-.01-.01Z"></path><path fill="#2d3142" d="M53,27.27V23a3.66,3.66,0,0,0-.16-1.1c-.04-.11-.08-.23-.12-.34a3.859,3.859,0,0,0-.87-1.37,3.985,3.985,0,0,0-.96-.71,4.234,4.234,0,0,0-.69-.3A3.961,3.961,0,0,0,49,19H43a4,4,0,0,0-4,4V34.51a4.49,4.49,0,0,1-.04.64,3.109,3.109,0,0,1-.06.44,6.228,6.228,0,0,1-.15.62,4.287,4.287,0,0,1-.19.54l-.57,1.09c-.09.13-.18.26-.28.38l-.25.3-1.32,1.34-.26.63.02-.02,1.09-.61.89-.5.54-.31.01-.01.56-.32L42,37l4,2,4-2,3.57,2.04.01.01,2.52,1.42.02.02L57,41l-2.24-2.24A5.993,5.993,0,0,1,53,34.51V27.27Z"></path><path fill="#fec3a6" d="M40,27h0a4,4,0,0,1,4-4h2l6,4a2,2,0,0,1,0,4v.789a6,6,0,0,1-2.672,4.992L46,39l-3.328-2.219A6,6,0,0,1,40,31.789V31a2,2,0,0,1,0-4Z"></path><path fill="#7ccdf4" d="M38.43,39.04l-.01.01-.62.14h-.01l-1.26.67-.63.61-.02.02-.41.64h-.01L37.31,47H57V43a4.041,4.041,0,0,0-.46-1.87,5.056,5.056,0,0,0-.42-.64l-.02-.02a3.949,3.949,0,0,0-2.52-1.42l-.01-.01A3.642,3.642,0,0,0,53,39l-3-2c0,2.21-1.79,6-4,6s-4-3.79-4-6l-3,2Z"></path><path fill="#2d3142" d="M25,39.86V39a6,6,0,0,1,6-6h2a6,6,0,0,1,6,6v.86Z"></path><path fill="#fec3a6" d="M38,39.6l-.771-1.517a2.046,2.046,0,0,0-3.212-.516l-.6.578a2.069,2.069,0,0,1-2.828,0l-.6-.578a2.046,2.046,0,0,0-3.212.516L26,39.6a1.967,1.967,0,1,0,0,3.933v.694a6,6,0,0,0,2.71,5.017l2.181,1.43a2.025,2.025,0,0,0,2.218,0l2.181-1.43A6,6,0,0,0,38,44.222v-.694A1.967,1.967,0,1,0,38,39.6Z"></path><path fill="#9b9c9b" d="M43,61H21V53a4,4,0,0,1,4-4h3l4,8,4-8h3a4,4,0,0,1,4,4Z"></path><path d="M57,18H55.88A6.984,6.984,0,0,0,57,14.361a2.977,2.977,0,0,0,2-2.8,2.944,2.944,0,0,0-1-2.188V9a7.008,7.008,0,0,0-7-7H49a7.008,7.008,0,0,0-7,7v.374a2.941,2.941,0,0,0-1,2.186,2.977,2.977,0,0,0,2,2.8A7,7,0,0,0,44.117,18H43a5.006,5.006,0,0,0-5,5v3.776a2.972,2.972,0,0,0,0,4.447V34.11A6.977,6.977,0,0,0,33,32H31a6.977,6.977,0,0,0-5,2.11V31.223a2.972,2.972,0,0,0,0-4.447V23a5.006,5.006,0,0,0-5-5H19.883A7,7,0,0,0,21,14.361a2.977,2.977,0,0,0,2-2.8,2.944,2.944,0,0,0-1-2.188V9a7.008,7.008,0,0,0-7-7H13A7.008,7.008,0,0,0,6,9v.374A2.941,2.941,0,0,0,5,11.56a2.977,2.977,0,0,0,2,2.8A6.984,6.984,0,0,0,8.12,18H7a5.006,5.006,0,0,0-5,5v8a1,1,0,0,0,1,1h7v2.51a4.977,4.977,0,0,1-1.467,3.543l-2.24,2.24a.972.972,0,0,0-.085,1.3A4.984,4.984,0,0,0,6,43v4a1,1,0,0,0,1,1H25a5.006,5.006,0,0,0-5,5v8a1,1,0,0,0,1,1H43a1,1,0,0,0,1-1V53a5.006,5.006,0,0,0-5-5H57a1,1,0,0,0,1-1V43a4.967,4.967,0,0,0-.209-1.4.973.973,0,0,0-.084-1.306l-2.24-2.24A4.977,4.977,0,0,1,54,34.51V32h7a1,1,0,0,0,1-1V23A5.006,5.006,0,0,0,57,18ZM40,30a1,1,0,0,1,0-2,1,1,0,0,0,1-1,3,3,0,0,1,3-3h1.7l5.748,3.832A1.006,1.006,0,0,0,52,28a1,1,0,0,1,0,2,1,1,0,0,0-1,1v.789a4.989,4.989,0,0,1-2.227,4.16L46,37.8l-2.773-1.849A4.989,4.989,0,0,1,41,31.789V31A1,1,0,0,0,40,30Zm5.445,9.832a1,1,0,0,0,1.11,0l2.249-1.5C48.337,40.1,47.1,42,46,42s-2.337-1.9-2.8-3.668Zm6.6-4.534a6.93,6.93,0,0,0,.683,2.321l-1.6-1.069A6.973,6.973,0,0,0,52.048,35.3ZM49,4h2a4.99,4.99,0,0,1,4.464,2.793,2.979,2.979,0,0,0-1.51-.75,3.052,3.052,0,0,0-2.623.792l-.619.589a1.059,1.059,0,0,1-1.433-.008l-.607-.578a3.053,3.053,0,0,0-2.626-.795,2.979,2.979,0,0,0-1.509.749A4.989,4.989,0,0,1,49,4Zm-6,7.56a.966.966,0,0,1,.505-.837A.992.992,0,0,1,44,10.59a1,1,0,0,0,.891-.546l.772-1.514a.976.976,0,0,1,.721-.516,1.042,1.042,0,0,1,.907.271l.6.571a3.037,3.037,0,0,0,4.207.009l.613-.583a1.043,1.043,0,0,1,.9-.268.977.977,0,0,1,.723.521l.77,1.509A1,1,0,0,0,56,10.59a1.014,1.014,0,0,1,.507.139A.963.963,0,0,1,57,11.56a.987.987,0,0,1-1,.97,1,1,0,0,0-1,1v.69a4.993,4.993,0,0,1-2.261,4.185l-.828.547A4.958,4.958,0,0,0,49,18H46.751A4.96,4.96,0,0,1,45,14.22v-.69a1,1,0,0,0-1-1A.987.987,0,0,1,43,11.56ZM43,20h6a3,3,0,0,1,3,3v2.8l-5.445-3.63A1.006,1.006,0,0,0,46,22H44a4.981,4.981,0,0,0-4,2.03V23A3,3,0,0,1,43,20ZM39.708,36.5a7.067,7.067,0,0,0,.169-.7,3.408,3.408,0,0,0,.073-.508,6.964,6.964,0,0,0,.923,1.256l-1.1.73c-.046-.181-.1-.36-.157-.535C39.649,36.662,39.688,36.576,39.708,36.5ZM38,42.528a1,1,0,0,0-1,1v.694a4.981,4.981,0,0,1-2.258,4.18l-2.18,1.431a1.026,1.026,0,0,1-1.123,0L29.258,48.4A4.981,4.981,0,0,1,27,44.222v-.694a1,1,0,0,0-1-1A.967.967,0,1,1,26,40.6a1,1,0,0,0,.892-.547l.77-1.517a.98.98,0,0,1,.725-.515A1.1,1.1,0,0,1,28.576,38a1.026,1.026,0,0,1,.716.284l.6.577a3.072,3.072,0,0,0,4.212,0l.6-.577a1.038,1.038,0,0,1,.905-.268.976.976,0,0,1,.724.515l.771,1.517A1,1,0,0,0,38,40.6a.967.967,0,1,1,0,1.933Zm-4.382,9L32,54.764l-1.619-3.237a3.006,3.006,0,0,0,3.237,0ZM31,34h2a4.99,4.99,0,0,1,4.465,2.8,2.988,2.988,0,0,0-1.518-.752,3.066,3.066,0,0,0-2.622.8l-.6.578a1.067,1.067,0,0,1-1.444,0l-.6-.578a3.066,3.066,0,0,0-2.622-.8,2.992,2.992,0,0,0-1.518.752A4.99,4.99,0,0,1,31,34Zm-6.777,3.28-1.1-.73a6.929,6.929,0,0,0,.923-1.256,3.874,3.874,0,0,0,.068.483,6.8,6.8,0,0,0,.165.686c.026.1.065.186.1.28C24.32,36.919,24.269,37.1,24.223,37.28ZM25,29a1,1,0,0,1-1,1,1,1,0,0,0-1,1v.789a4.989,4.989,0,0,1-2.227,4.16L18,37.8l-2.773-1.849A4.989,4.989,0,0,1,13,31.789V31a1,1,0,0,0-1-1,1,1,0,0,1,0-2,1.006,1.006,0,0,0,.555-.168L18.3,24H20a3,3,0,0,1,3,3,1,1,0,0,0,1,1A1,1,0,0,1,25,29ZM11.952,35.3a6.973,6.973,0,0,0,.921,1.252l-1.6,1.069A6.93,6.93,0,0,0,11.952,35.3Zm5.493,4.534a1,1,0,0,0,1.11,0l2.249-1.5C20.337,40.1,19.1,42,18,42s-2.337-1.9-2.8-3.668ZM24,23v1.03A4.981,4.981,0,0,0,20,22H18a1.006,1.006,0,0,0-.555.168L12,25.8V23a3,3,0,0,1,3-3h6A3,3,0,0,1,24,23ZM13,4h2a4.99,4.99,0,0,1,4.464,2.793,2.979,2.979,0,0,0-1.51-.75,3.052,3.052,0,0,0-2.623.792l-.619.589a1.059,1.059,0,0,1-1.433-.008l-.607-.578a3.054,3.054,0,0,0-2.626-.795,2.979,2.979,0,0,0-1.509.749A4.989,4.989,0,0,1,13,4ZM7,11.56a.966.966,0,0,1,.5-.837A.992.992,0,0,1,8,10.59a1,1,0,0,0,.891-.546L9.663,8.53a.976.976,0,0,1,.721-.516,1.042,1.042,0,0,1,.907.271l.6.571a3.037,3.037,0,0,0,4.207.009l.613-.583a1.04,1.04,0,0,1,.9-.268.977.977,0,0,1,.723.521l.77,1.509A1,1,0,0,0,20,10.59a1.014,1.014,0,0,1,.507.139A.963.963,0,0,1,21,11.56a.987.987,0,0,1-1,.97,1,1,0,0,0-1,1v.69A4.96,4.96,0,0,1,17.249,18H15a4.958,4.958,0,0,0-2.911.952l-.83-.548A4.993,4.993,0,0,1,9,14.22v-.69a1,1,0,0,0-1-1A.987.987,0,0,1,7,11.56ZM4,23a3,3,0,0,1,3-3H9.382l.826,1.653A4.917,4.917,0,0,0,10,23v3.781A2.953,2.953,0,0,0,9.176,30H4ZM8,46V43a3.006,3.006,0,0,1,.331-1.378c.1-.184.214-.36.276-.445.024-.024.046-.049.068-.075a2.943,2.943,0,0,1,1.883-1.061,1.2,1.2,0,0,0,.119-.025,1.923,1.923,0,0,0,.878-.184l1.686-1.124C13.851,41.1,15.577,44,18,44s4.149-2.9,4.759-5.292l1.135.756a2.932,2.932,0,0,0-.894,2.1,2.972,2.972,0,0,0,2,2.8A7,7,0,0,0,25.231,46Zm34,7v7H22V53a3,3,0,0,1,3-3h2.382l3.723,7.447a1.042,1.042,0,0,0,1.79,0L36.618,50H39A3,3,0,0,1,42,53Zm14-7H38.769A7,7,0,0,0,39,44.359a2.972,2.972,0,0,0,2-2.8,2.932,2.932,0,0,0-.894-2.1l1.135-.756C41.851,41.1,43.577,44,46,44s4.149-2.9,4.759-5.292l1.686,1.124a1.9,1.9,0,0,0,.874.183.994.994,0,0,0,.123.026A2.943,2.943,0,0,1,55.325,41.1l.035.04a4.059,4.059,0,0,1,.292.448A3.038,3.038,0,0,1,56,43Zm4-16H54.824A2.953,2.953,0,0,0,54,26.781V23a4.917,4.917,0,0,0-.208-1.347L54.618,20H57a3,3,0,0,1,3,3Z"></path></svg>
                   </div>
                   <div class="dropdown">
                     <button
                       class="btn p-0"
                       type="button"
-                      id="cardOpt4"
+                      id="cardOpt3"
                       data-bs-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
                       <i class="bx bx-dots-vertical-rounded"></i>
                     </button>
-                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt4">
-                      <a class="dropdown-item" href="javascript:void(0);">View More</a>
-                      <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt3">
+                      <a class="dropdown-item" href="/dashboard/testimoni">View More</a>
                     </div>
                   </div>
                 </div>
-                <span class="d-block mb-1">Payments</span>
-                <h3 class="card-title text-nowrap mb-2">$2,456</h3>
-                <small class="text-danger fw-semibold"><i class="bx bx-down-arrow-alt"></i> -14.82%</small>
+                <span class="fw-semibold d-block mb-1">Testimoni</span>
+                <h3 class="card-title mb-2">{{ $testimoni }}</h3>
               </div>
             </div>
-          </div>
-          <div class="col-6 mb-4">
-            <div class="card">
+      </div>
+      <div class="col-lg-4 mb-3">
+        <div class="card">
               <div class="card-body">
                 <div class="card-title d-flex align-items-start justify-content-between">
                   <div class="avatar flex-shrink-0">
-                    <img src="../assets/img/icons/unicons/cc-primary.png" alt="Credit Card" class="rounded" />
+                    <svg xmlns="http://www.w3.org/2000/svg"  width="48" height="48"  xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 72 72" viewBox="0 0 72 72" id="businessman"><path fill="#12B8A7" d="M71,36c0,19.3462-15.6938,35-35,35C16.579,71,1,55.2339,1,36C1,16.67,16.67,1,36,1S71,16.67,71,36z"></path><defs><path id="a" d="M71,36c0,19.0306-15.3598,35-35,35C16.6428,71,1,55.2934,1,36C1,16.67,16.67,1,36,1S71,16.67,71,36z"></path></defs><clipPath id="b"><use overflow="visible" xlink:href="#a"></use></clipPath><g clip-path="url(#b)"><path fill="#445A6B" d="M65.8971,71H6.1029l5.2439-15.8831c0.7982-2.4148,3.0614-4.0516,5.5975-4.0516h38.1115
+                      c2.5462,0,4.7993,1.6368,5.5975,4.0516L65.8971,71z"></path><rect width="14.145" height="19.935" x="28.937" y="51.065" fill="#D2DBE0"></rect><polygon fill="#B9C1C6" points="43.505 51.069 43.646 61.034 36.006 56.243 28.368 61.034 28.201 51.069 31.782 49.431 40.221 49.431"></polygon><path fill="#EE432C" d="M34.2882 61.2232c.069.2221.2745.3734.5071.3734h2.4129c.2326 0 .4381-.1513.5072-.3734l.6283-2.021c.1063-.3419-.1492-.6888-.5072-.6888H34.167c-.358 0-.6134.3469-.5071.6888L34.2882 61.2232zM37.6185 62.484c-.0283-.2504-.2401-.4396-.4921-.4396h-2.2502c-.252 0-.4637.1892-.4921.4396L33.3067 71h5.3893L37.6185 62.484z"></path><path fill="#112B3F" d="M32.9313 71h-6.3666l-5.7191-7.921 4.4337-2.6702-4.085-2.2518c2.6602-2.7698 4.384-5.0714 6.277-6.815.9665-.8967 1.9728-1.644 3.1684-2.2318-.0996.1295-.2092.259-.3089.3985-.4185.558-.7273 1.1857-.9366 1.8333C28.3407 54.6053 29.7994 56.4002 32.9313 71zM51.1646 63.0789L45.4355 71h-6.3667l3.6765-15.6826c.3188-1.3252.2789-2.7101-.1395-3.9754-.2093-.6477-.5181-1.2754-.9366-1.8333-.0996-.1395-.2093-.269-.3089-.3985 1.2056.5878 2.2119 1.3351 3.1784 2.2318 1.8831 1.7436 3.6068 4.0552 6.277 6.815l-4.095 2.2518L51.1646 63.0789z"></path><path fill="#FAB687" d="M42.1331,39.8849v8.8259c0,3.6026-2.6627,6.5218-5.9488,6.5218h-0.3651
+                      c-3.2861,0-5.9489-2.9192-5.9489-6.5218v-8.8259H42.1331z"></path><path fill="#F8A771" d="M36.025,49.7537L36.025,49.7537c-3.0926,0-5.7334-2.1543-6.0051-4.9969
+                      c-0.0458-0.4796-0.069-0.9635-0.069-1.451c0-0.484,0.0229-0.964,0.068-1.4394c0.2695-2.8431,2.9121-4.9976,6.005-4.9976h0.0012
+                      c3.329,0,6.0277,2.4902,6.0277,5.562v1.7609C42.0527,47.2635,39.354,49.7537,36.025,49.7537z"></path><path fill="#FAB687" d="M51.4493,28.8954c0,1.2933-0.1111,2.5663-0.3132,3.7889c-1.4448,8.5882-7.6687,15.0446-15.1355,15.0446
+                      S22.31,41.2726,20.8652,32.6843c-0.2021-1.2226-0.3132-2.4957-0.3132-3.7889c0-5.2136,1.7378-9.9219,4.5467-13.337
+                      c2.7987-3.3949,6.6482-5.4965,10.902-5.4965s8.1033,2.1016,10.902,5.4965C49.7115,18.9735,51.4493,23.6818,51.4493,28.8954z"></path><path fill="#663430" d="M24.8788,13.0256c-0.5663-1.243-0.2397-2.7775,0.6129-3.8445s2.1557-1.7043,3.4934-1.9802
+                      c1.3377-0.2759,2.7205-0.221,4.0818-0.11c2.245,0.183,4.4778,0.5152,6.6788,0.9937c2.236,0.4861,4.4571,1.1303,6.4804,2.1991
+                      s3.8504,2.5875,5.0244,4.5516c1.461,2.4444,1.8192,5.4037,1.6979,8.2489c-0.1811,4.2474-1.4575,8.3566-3.5297,12.0687
+                      c-0.3735-3.3223-0.747-6.6446-1.1204-9.9669c-0.1338-1.1906-0.2852-2.4313-0.9458-3.4309
+                      c-0.7539-1.1408-2.0783-1.7982-3.4184-2.0704c-1.3401-0.2722-2.7217-0.2087-4.0891-0.2034
+                      c-2.7167,0.0106-5.434-0.2141-8.1122-0.6696c-1.8897-0.3214-4.4448-1.2661-6.0519,0.3244
+                      c-0.7251,0.7177-0.9478,1.7859-1.1368,2.7884c-0.8264,4.3837-1.6527,8.7675-2.4791,13.1512
+                      c-2.2988-4.7266-3.351-9.9992-2.9508-15.24c0.1259-1.6485,0.4067-3.3358,1.2713-4.7451S23.2294,12.9119,24.8788,13.0256z"></path><path fill="#FAB687" d="M20.6016,30.0731c0.046,0.8862,0.1235,1.7634,0.2637,2.6112
+                      c1.4448,8.5883,7.6687,15.0445,15.1354,15.0445c7.4668,0,13.6908-6.4562,15.1356-15.0445
+                      c0.1402-0.8478,0.2177-1.725,0.2635-2.6112H20.6016z"></path><circle cx="30.514" cy="30.593" r="1.594" fill="#3D2F46"></circle><circle cx="40.737" cy="30.593" r="1.594" fill="#3D2F46"></circle><path fill="#3D2F46" d="M31.8333 26.7169l-.0278-.142c-.0767-.3918-.4566-.6472-.8484-.5705l-3.3816.6625c-.3918.0768-.6472.4567-.5705.8484l.0278.142c.0767.3918.4566.6472.8484.5705l3.3816-.6625C31.6546 27.4885 31.91 27.1086 31.8333 26.7169zM43.6755 26.6669l-3.3816-.6625c-.3918-.0767-.7717.1786-.8484.5705l-.0278.142c-.0768.3918.1786.7717.5705.8484l3.3815.6625c.3918.0767.7717-.1787.8485-.5705l.0278-.142C44.3227 27.1235 44.0673 26.7436 43.6755 26.6669z"></path><path fill="#663430" d="M41.2384,39.6567c-0.0722,1.2178-0.5864,2.3004-1.3802,3.1122c-0.018,0.0181-0.027,0.0271-0.0451,0.0451
+                        c-0.0992,0.0993-0.1984,0.1985-0.3157,0.2887c-0.7938,0.6946-1.8313,1.1547-2.9769,1.2629
+                        c-0.1624,0.009-0.3428,0.0181-0.5142,0.0181c-0.2526,0-0.4961-0.0181-0.7397-0.0452c-0.2255-0.0361-0.442-0.0812-0.6585-0.1443
+                        c-0.0181,0-0.0271-0.009-0.0451-0.009c-0.0361-0.009-0.0812-0.027-0.1173-0.0361c-2.0207-0.5864-3.5632-2.3364-3.6805-4.4924
+                        H41.2384z"></path><path fill="#EF4F63" d="M39.8581,42.7689c-0.018,0.0181-0.027,0.0271-0.0451,0.0451c-0.0992,0.0993-0.1984,0.1985-0.3157,0.2887
+                        c-0.7938,0.6946-1.8313,1.1547-2.9769,1.2629c-0.1624,0.009-0.3428,0.0181-0.5142,0.0181c-0.2526,0-0.4961-0.0181-0.7397-0.0452
+                        c-0.2436-0.0361-0.4781-0.0812-0.7126-0.1443l0.009-0.009c0.1173-0.2887,0.3067-0.5503,0.5323-0.7938
+                        c0.5954-0.6585,1.4614-1.0735,2.3544-1.1456c0.7037-0.0451,1.4072,0.1353,2.0748,0.3879
+                        C39.6326,42.6787,39.7499,42.7148,39.8581,42.7689z"></path><g><ellipse cx="50.704" cy="29.982" fill="#FAB687" rx="3.172" ry="4.096"></ellipse><ellipse cx="21.299" cy="29.982" fill="#FAB687" rx="3.172" ry="4.096"></ellipse></g></g></svg>
                   </div>
                   <div class="dropdown">
                     <button
                       class="btn p-0"
                       type="button"
-                      id="cardOpt1"
+                      id="cardOpt3"
                       data-bs-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      <i class="bx bx-dots-vertical-rounded"></i>
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="cardOpt1">
-                      <a class="dropdown-item" href="javascript:void(0);">View More</a>
-                      <a class="dropdown-item" href="javascript:void(0);">Delete</a>
-                    </div>
                   </div>
                 </div>
-                <span class="fw-semibold d-block mb-1">Transactions</span>
-                <h3 class="card-title mb-2">$14,857</h3>
-                <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +28.14%</small>
+                <span class="fw-semibold d-block mb-1">Admin</span>
+                <h3 class="card-title mb-2">{{ $user }}</h3>
               </div>
             </div>
-          </div>
-          <!-- </div>
-        <div class="row"> -->
-          <div class="col-12 mb-4">
-            <div class="card">
-              <div class="card-body">
-                <div class="d-flex justify-content-between flex-sm-row flex-column gap-3">
-                  <div class="d-flex flex-sm-column flex-row align-items-start justify-content-between">
-                    <div class="card-title">
-                      <h5 class="text-nowrap mb-2">Profile Report</h5>
-                      <span class="badge bg-label-warning rounded-pill">Year 2021</span>
-                    </div>
-                    <div class="mt-sm-auto">
-                      <small class="text-success text-nowrap fw-semibold"
-                        ><i class="bx bx-chevron-up"></i> 68.2%</small
-                      >
-                      <h3 class="mb-0">$84,686k</h3>
-                    </div>
-                  </div>
-                  <div id="profileReportChart"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-    <div class="row">
-      <!-- Order Statistics -->
-      <div class="col-md-6 col-lg-4 col-xl-4 order-0 mb-4">
-        <div class="card h-100">
-          <div class="card-header d-flex align-items-center justify-content-between pb-0">
-            <div class="card-title mb-0">
-              <h5 class="m-0 me-2">Order Statistics</h5>
-              <small class="text-muted">42.82k Total Sales</small>
-            </div>
-            <div class="dropdown">
-              <button
-                class="btn p-0"
-                type="button"
-                id="orederStatistics"
-                data-bs-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <i class="bx bx-dots-vertical-rounded"></i>
-              </button>
-              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="orederStatistics">
-                <a class="dropdown-item" href="javascript:void(0);">Select All</a>
-                <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
-                <a class="dropdown-item" href="javascript:void(0);">Share</a>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <div class="d-flex flex-column align-items-center gap-1">
-                <h2 class="mb-2">8,258</h2>
-                <span>Total Orders</span>
-              </div>
-              <div id="orderStatisticsChart"></div>
-            </div>
-            <ul class="p-0 m-0">
-              <li class="d-flex mb-4 pb-1">
-                <div class="avatar flex-shrink-0 me-3">
-                  <span class="avatar-initial rounded bg-label-primary"
-                    ><i class="bx bx-mobile-alt"></i
-                  ></span>
-                </div>
-                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                  <div class="me-2">
-                    <h6 class="mb-0">Electronic</h6>
-                    <small class="text-muted">Mobile, Earbuds, TV</small>
-                  </div>
-                  <div class="user-progress">
-                    <small class="fw-semibold">82.5k</small>
-                  </div>
-                </div>
-              </li>
-              <li class="d-flex mb-4 pb-1">
-                <div class="avatar flex-shrink-0 me-3">
-                  <span class="avatar-initial rounded bg-label-success"><i class="bx bx-closet"></i></span>
-                </div>
-                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                  <div class="me-2">
-                    <h6 class="mb-0">Fashion</h6>
-                    <small class="text-muted">T-shirt, Jeans, Shoes</small>
-                  </div>
-                  <div class="user-progress">
-                    <small class="fw-semibold">23.8k</small>
-                  </div>
-                </div>
-              </li>
-              <li class="d-flex mb-4 pb-1">
-                <div class="avatar flex-shrink-0 me-3">
-                  <span class="avatar-initial rounded bg-label-info"><i class="bx bx-home-alt"></i></span>
-                </div>
-                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                  <div class="me-2">
-                    <h6 class="mb-0">Decor</h6>
-                    <small class="text-muted">Fine Art, Dining</small>
-                  </div>
-                  <div class="user-progress">
-                    <small class="fw-semibold">849k</small>
-                  </div>
-                </div>
-              </li>
-              <li class="d-flex">
-                <div class="avatar flex-shrink-0 me-3">
-                  <span class="avatar-initial rounded bg-label-secondary"
-                    ><i class="bx bx-football"></i
-                  ></span>
-                </div>
-                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                  <div class="me-2">
-                    <h6 class="mb-0">Sports</h6>
-                    <small class="text-muted">Football, Cricket Kit</small>
-                  </div>
-                  <div class="user-progress">
-                    <small class="fw-semibold">99</small>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!--/ Order Statistics -->
-
-      <!-- Expense Overview -->
-      <div class="col-md-6 col-lg-4 order-1 mb-4">
-        <div class="card h-100">
-          <div class="card-header">
-            <ul class="nav nav-pills" role="tablist">
-              <li class="nav-item">
-                <button
-                  type="button"
-                  class="nav-link active"
-                  role="tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#navs-tabs-line-card-income"
-                  aria-controls="navs-tabs-line-card-income"
-                  aria-selected="true"
-                >
-                  Income
-                </button>
-              </li>
-              <li class="nav-item">
-                <button type="button" class="nav-link" role="tab">Expenses</button>
-              </li>
-              <li class="nav-item">
-                <button type="button" class="nav-link" role="tab">Profit</button>
-              </li>
-            </ul>
-          </div>
-          <div class="card-body px-0">
-            <div class="tab-content p-0">
-              <div class="tab-pane fade show active" id="navs-tabs-line-card-income" role="tabpanel">
-                <div class="d-flex p-4 pt-3">
-                  <div class="avatar flex-shrink-0 me-3">
-                    <img src="../assets/img/icons/unicons/wallet.png" alt="User" />
-                  </div>
-                  <div>
-                    <small class="text-muted d-block">Total Balance</small>
-                    <div class="d-flex align-items-center">
-                      <h6 class="mb-0 me-1">$459.10</h6>
-                      <small class="text-success fw-semibold">
-                        <i class="bx bx-chevron-up"></i>
-                        42.9%
-                      </small>
-                    </div>
-                  </div>
-                </div>
-                <div id="incomeChart"></div>
-                <div class="d-flex justify-content-center pt-4 gap-2">
-                  <div class="flex-shrink-0">
-                    <div id="expensesOfWeek"></div>
-                  </div>
-                  <div>
-                    <p class="mb-n1 mt-1">Expenses This Week</p>
-                    <small class="text-muted">$39 less than last week</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--/ Expense Overview -->
-
-      <!-- Transactions -->
-      <div class="col-md-6 col-lg-4 order-2 mb-4">
-        <div class="card h-100">
-          <div class="card-header d-flex align-items-center justify-content-between">
-            <h5 class="card-title m-0 me-2">Transactions</h5>
-            <div class="dropdown">
-              <button
-                class="btn p-0"
-                type="button"
-                id="transactionID"
-                data-bs-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <i class="bx bx-dots-vertical-rounded"></i>
-              </button>
-              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="transactionID">
-                <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
-                <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
-                <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <ul class="p-0 m-0">
-              <li class="d-flex mb-4 pb-1">
-                <div class="avatar flex-shrink-0 me-3">
-                  <img src="../assets/img/icons/unicons/paypal.png" alt="User" class="rounded" />
-                </div>
-                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                  <div class="me-2">
-                    <small class="text-muted d-block mb-1">Paypal</small>
-                    <h6 class="mb-0">Send money</h6>
-                  </div>
-                  <div class="user-progress d-flex align-items-center gap-1">
-                    <h6 class="mb-0">+82.6</h6>
-                    <span class="text-muted">USD</span>
-                  </div>
-                </div>
-              </li>
-              <li class="d-flex mb-4 pb-1">
-                <div class="avatar flex-shrink-0 me-3">
-                  <img src="../assets/img/icons/unicons/wallet.png" alt="User" class="rounded" />
-                </div>
-                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                  <div class="me-2">
-                    <small class="text-muted d-block mb-1">Wallet</small>
-                    <h6 class="mb-0">Mac'D</h6>
-                  </div>
-                  <div class="user-progress d-flex align-items-center gap-1">
-                    <h6 class="mb-0">+270.69</h6>
-                    <span class="text-muted">USD</span>
-                  </div>
-                </div>
-              </li>
-              <li class="d-flex mb-4 pb-1">
-                <div class="avatar flex-shrink-0 me-3">
-                  <img src="../assets/img/icons/unicons/chart.png" alt="User" class="rounded" />
-                </div>
-                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                  <div class="me-2">
-                    <small class="text-muted d-block mb-1">Transfer</small>
-                    <h6 class="mb-0">Refund</h6>
-                  </div>
-                  <div class="user-progress d-flex align-items-center gap-1">
-                    <h6 class="mb-0">+637.91</h6>
-                    <span class="text-muted">USD</span>
-                  </div>
-                </div>
-              </li>
-              <li class="d-flex mb-4 pb-1">
-                <div class="avatar flex-shrink-0 me-3">
-                  <img src="../assets/img/icons/unicons/cc-success.png" alt="User" class="rounded" />
-                </div>
-                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                  <div class="me-2">
-                    <small class="text-muted d-block mb-1">Credit Card</small>
-                    <h6 class="mb-0">Ordered Food</h6>
-                  </div>
-                  <div class="user-progress d-flex align-items-center gap-1">
-                    <h6 class="mb-0">-838.71</h6>
-                    <span class="text-muted">USD</span>
-                  </div>
-                </div>
-              </li>
-              <li class="d-flex mb-4 pb-1">
-                <div class="avatar flex-shrink-0 me-3">
-                  <img src="../assets/img/icons/unicons/wallet.png" alt="User" class="rounded" />
-                </div>
-                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                  <div class="me-2">
-                    <small class="text-muted d-block mb-1">Wallet</small>
-                    <h6 class="mb-0">Starbucks</h6>
-                  </div>
-                  <div class="user-progress d-flex align-items-center gap-1">
-                    <h6 class="mb-0">+203.33</h6>
-                    <span class="text-muted">USD</span>
-                  </div>
-                </div>
-              </li>
-              <li class="d-flex">
-                <div class="avatar flex-shrink-0 me-3">
-                  <img src="../assets/img/icons/unicons/cc-warning.png" alt="User" class="rounded" />
-                </div>
-                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                  <div class="me-2">
-                    <small class="text-muted d-block mb-1">Mastercard</small>
-                    <h6 class="mb-0">Ordered Food</h6>
-                  </div>
-                  <div class="user-progress d-flex align-items-center gap-1">
-                    <h6 class="mb-0">-92.45</h6>
-                    <span class="text-muted">USD</span>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!--/ Transactions -->
-    </div>
-  </div>
+</div>
 @endsection

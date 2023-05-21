@@ -50,13 +50,17 @@
         height: 350,
         toolbar: [
           ['style', ['style']],
+          ['fontsize', ['fontsize']],
           ['font', ['bold', 'underline', 'clear']],
+          ['fontname', ['fontname']],
           ['color', ['color']],
           ['para', ['ul', 'ol', 'paragraph']],
           ['table', ['table']],
           ['insert', ['link', 'picture', 'video']],
-          ['view', ['fullscreen', 'codeview', 'help']]
+          ['view', ['fullscreen', 'codeview', 'help']],
+          ['height', ['height']]
         ], 
+        fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '20', '22', '24', '28', '32', '36', '40', '48', '56', '64', '72', '96'],
         callbacks: {
             onEnterFullscreen: function () {
             $('.note-editor').addClass('fullscreen');

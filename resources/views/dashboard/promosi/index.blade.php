@@ -23,9 +23,9 @@
                 <div class="d-flex align-items-end row">
                     <div class="col-12">
                         <div class="card-body">
-                            <section id="question" class="p-3" style="background-color: #F8F6F3; border-radius: 10px">
+                            <section id="question">
                                 @if ($promosi !== null)   
-                                    <div class="row p-3">
+                                    <div class="row p-3" style="background-color: #F8F6F3; border-radius: 10px">
                                         <div class="heading col-lg-4 p-5 d-flex align-items-center" data-class="heading" style="background-color: black">
                                             <h3 style="color: #fff" data-aos="fade-up" data-aos-once="true">"{{ $promosi->heading }}"</h3>
                                         </div>

@@ -48,20 +48,20 @@
                                             @else
                                                 <div class="col">
                                                     <ul class="list-unstyled">
-                                                        <li><i class="fa-solid fa-bed m-2"></i> 4 buah kamar tidur</li>
-                                                        <li><i class="fa-solid fa-bath m-2"></i> 4 buah kamar mandi</li>
-                                                        <li><i class="fa-solid fa-couch m-2"></i> Ruang tamu luas</li>
-                                                        <li><i class="fa-solid fa-bath m-2"></i> 4 buah kamar mandi</li>
-                                                        <li><i class="fa-solid fa-couch m-2"></i> Ruang tamu luas</li>
+                                                        <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
+                                                        <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
+                                                        <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
+                                                        <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
+                                                        <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
                                                     </ul>
                                                 </div>
                                                 <div class="col">
                                                     <ul class="list-unstyled">
-                                                        <li><i class="fa-solid fa-bed m-2"></i> 4 buah kamar tidur</li>
-                                                        <li><i class="fa-solid fa-bath m-2"></i> 4 buah kamar mandi</li>
-                                                        <li><i class="fa-solid fa-couch m-2"></i> Ruang tamu luas</li>
-                                                        <li><i class="fa-solid fa-bath m-2"></i> 4 buah kamar mandi</li>
-                                                        <li><i class="fa-solid fa-couch m-2"></i> Ruang tamu luas</li>
+                                                        <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
+                                                        <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
+                                                        <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
+                                                        <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
+                                                        <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
                                                     </ul>
                                                 </div>
                                             @endif

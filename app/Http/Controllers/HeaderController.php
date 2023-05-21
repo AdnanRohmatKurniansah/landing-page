@@ -85,7 +85,7 @@ class HeaderController extends Controller
 
         if ($request->file('logo')) {
             if ($request->oldLogo) {
-                Storage::delete($request->oldlogo);
+                Storage::delete($request->oldLogo);
             }
             $validatedData['logo'] = $request->file('logo')->store('header-images');
         }

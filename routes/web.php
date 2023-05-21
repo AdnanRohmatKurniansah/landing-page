@@ -11,12 +11,17 @@ use App\Http\Controllers\PromoController;
 use App\Http\Controllers\PromosiController;
 use App\Http\Controllers\SosmedController;
 use App\Http\Controllers\TestimoniController;
+use App\Models\Benefit;
+use App\Models\Daftar;
 use App\Models\Facility;
+use App\Models\Feature;
 use App\Models\Footer;
 use App\Models\Header;
+use App\Models\Promo;
 use App\Models\Promosi;
 use App\Models\Sosmed;
 use App\Models\Testimoni;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,7 +42,11 @@ Route::get('/', function () {
         'facilities' => Facility::orderBy('id', 'desc')->get(),
         'testimonies' => Testimoni::orderBy('id', 'desc')->get(),
         'footer' => Footer::first(),
-        'sosmeds' => Sosmed::all()
+        'sosmeds' => Sosmed::all(),
+        'benefit' => Benefit::first(),
+        'daftars' => Daftar::all(),
+        'promo' => Promo::first(),
+        'features' => Feature::all()
     ]);
 });
 
@@ -50,7 +59,11 @@ Route::middleware(['guest'])->group(function() {
 
 Route::middleware(['auth'])->prefix('dashboard')->group(function() {
     Route::get('/', function() {
-        return view('dashboard.index');
+        return view('dashboard.index', [
+            'facility' => Facility::count(),
+            'testimoni' => Testimoni::count(),
+            'user' => User::count()
+        ]);
     });
     Route::get('/updatePass', [AuthController::class, 'show']);
     Route::post('/updatePass', [AuthController::class, 'updatePassword']);

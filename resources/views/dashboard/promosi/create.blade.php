@@ -49,12 +49,15 @@
         height: 350,
         toolbar: [
           ['style', ['style']],
+          ['fontsize', ['fontsize']],
           ['font', ['bold', 'underline', 'clear']],
+          ['fontname', ['fontname']],
           ['color', ['color']],
           ['para', ['ul', 'ol', 'paragraph']],
           ['table', ['table']],
           ['insert', ['link', 'picture', 'video']],
-          ['view', ['fullscreen', 'codeview', 'help']]
+          ['view', ['fullscreen', 'codeview', 'help']],
+          ['height', ['height']]
         ], 
         callbacks: {
             onEnterFullscreen: function () {

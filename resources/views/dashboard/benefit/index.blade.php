@@ -47,8 +47,8 @@
                                                     <img class="img-fluid" src="/assets/img/tabungan.png" alt="">
                                                 </div>
                                                 <div class="col-lg-10">
-                                                    <h6 data-aos="fade-up" data-aos-once="true" >MENGHEMAT UANG</h6>
-                                                    <p data-aos="fade-up" data-aos-once="true">Nikmati harga lebih ekonomis dibandingkan dengan penginapan di hotel ketika Anda menyewa Vila Mountain Oasis.</p>
+                                                    <h6 data-aos="fade-up" data-aos-once="true" >Lorem ipsum dolor sit.</h6>
+                                                    <p data-aos="fade-up" data-aos-once="true">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id reiciendis error, repudiandae porro deserunt non dolorem sit earum omnis cum.</p>
                                                 </div>
                                             </div>
                                             <div class="list row mt-4" data-class="list">
@@ -56,8 +56,8 @@
                                                     <img class="img-fluid" src="/assets/img/tabungan.png" alt="">
                                                 </div>
                                                 <div class="col-lg-10">
-                                                    <h6 data-aos="fade-up" data-aos-once="true" >MENGHEMAT UANG</h6>
-                                                    <p data-aos="fade-up" data-aos-once="true">Nikmati harga lebih ekonomis dibandingkan dengan penginapan di hotel ketika Anda menyewa Vila Mountain Oasis.</p>
+                                                    <h6 data-aos="fade-up" data-aos-once="true" >Lorem ipsum dolor sit.</h6>
+                                                    <p data-aos="fade-up" data-aos-once="true">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id reiciendis error, repudiandae porro deserunt non dolorem sit earum omnis cum.</p>
                                                 </div>
                                             </div>
                                             <div class="list row mt-4" data-class="list">
@@ -65,8 +65,8 @@
                                                     <img class="img-fluid" src="/assets/img/tabungan.png" alt="">
                                                 </div>
                                                 <div class="col-lg-10">
-                                                    <h6 data-aos="fade-up" data-aos-once="true" >MENGHEMAT UANG</h6>
-                                                    <p data-aos="fade-up" data-aos-once="true">Nikmati harga lebih ekonomis dibandingkan dengan penginapan di hotel ketika Anda menyewa Vila Mountain Oasis.</p>
+                                                    <h6 data-aos="fade-up" data-aos-once="true" >Lorem ipsum dolor sit.</h6>
+                                                    <p data-aos="fade-up" data-aos-once="true">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id reiciendis error, repudiandae porro deserunt non dolorem sit earum omnis cum.</p>
                                                 </div>
                                             </div>
                                         @endif

@@ -4,10 +4,10 @@
 .scroll-top {
     text-decoration: none;
     position: fixed;
-    visibility: hidden;
-    opacity: 0;
+    visibility: visible;
+    opacity: 1;
     right: 30px;
-    bottom: -30px;
+    bottom: 30px;
     z-index: 99999;
     background: #2DB742;
     width: 55px;
@@ -22,11 +22,7 @@
     line-height: 0;
   }
   
-  .scroll-top.active {
-    visibility: visible;
-    opacity: 1;
-    bottom: 15px;
-  }
+
 
 /*--------------------------------------------------------------
 # Header
@@ -380,7 +376,7 @@
     color: #fff;
 }
 
-#header .booking a, #footer .booking a {
+/* #header .booking a, #footer .booking a {
     text-decoration: none;
     color: black;
     font-weight: 600;
@@ -391,7 +387,18 @@
 
 #header .booking a:hover, #footer .booking a:hover {
     color: gray;
+} */
+#header .booking .btn, #footer .booking .btn {
+  transition: transform 0.2s ease;
 }
+
+#header .booking .btn:hover, #footer .booking .btn:hover {
+  color: gray;
+  background-color: #fff;
+  transform: translateY(-5px);
+  transition-delay: 0.2s;
+}
+
 @media (max-width: 990px) {
     #header {
         padding-right: 20px;
@@ -416,13 +423,15 @@
     color: #534543;
 }
 
-#question .booking a, #benefit .booking a, #promo .booking a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 600;
-    font-size: 18px;
-    padding: 17px;
+#question .booking .btn, #benefit .booking .btn, #promo .booking .btn {
     background-color: #000;
+    color: #fff;
+    transition: transform 0.2s ease;
+}
+
+#question .booking .btn:hover, #benefit .booking .btn:hover, #promo .booking .btn:hover {
+  transform: translateY(-5px);
+  transition-delay: 0.2s;
 }
 
 @media (max-width: 1000px) {
@@ -432,6 +441,30 @@
         text-align: center;
     }
 }
+
+/* @media (max-width: 1400px) {
+  #question .solution {
+    position: absolute; 
+    top: 650px; 
+    left: 100px; 
+    z-index: 1;
+  }
+} */
+@media (min-width: 1200px) {
+  #question .col-md-3 {
+     position: absolute;
+     top: 670px;
+     left: 100px;
+     z-index: 1;
+  }
+}
+
+@media (max-width: 991px) {
+  #question .col-md-3 {
+    width: max-content;
+  }
+} 
+
 
 #benefit {
     background-color: #F8F6F3;
@@ -540,3 +573,18 @@
         text-align: center;
     }
 }
+
+/* @media (min-width: 1200px) {
+  #footer .col-lg-6 .image{
+     position: absolute;
+     top: 1000;
+     left: 500px;
+     z-index: 1;
+  }
+}
+
+@media (max-width: 991px) {
+  #footer .col-lg-6 .image{
+    width: max-content;
+  }
+}  */

@@ -36,7 +36,7 @@
                                                 <h1 style="font-weight: 700; color: #fff" data-aos="fade-up" data-aos-once="true">{{ $header->heading }}</h1>
                                             </div>
                                             <div class="sub-heading mt-4" data-class="sub-heading">
-                                                <p style="font-size: 16px">{!! $header->subHeading !!}</p>
+                                                <p style="font-size: 16px; color: #fff">{!! $header->subHeading !!}</p>
                                             </div>
                                             <div class="booking mt-5 pb-5">
                                                 <a class="p-3" style="background-color: white; color: black" href="#"><i style="margin-right: 10px; font-size: 20px" class='bx bxl-whatsapp'></i> Booking Sekarang</a>

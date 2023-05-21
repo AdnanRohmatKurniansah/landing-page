@@ -13,6 +13,7 @@
                 <tr>
                   <th>#</th>
                   <th>Name</th>
+                  <th>Image</th>
                   <th>Actions</th>
                 </tr>
               </thead>
@@ -21,6 +22,7 @@
                   <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $facility->name }}</td>
+                    <td><img src="{{ asset('storage/' . $facility->image) }}" width="50px"></td>
                     <td class="d-flex p-2">
                         <a href="/dashboard/facility/{{ $facility->id }}/edit" class="badge bg-success" style="font-size: 18px; margin-right: 5px"><i class="bx bx-edit-alt me-1"></i></a>
                         <form action="/dashboard/facility/{{ $facility->id }}" method="post">

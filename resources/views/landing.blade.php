@@ -35,7 +35,7 @@
                         <a href="#"><i style="margin-right: 10px" class="fa-brands fa-whatsapp"></i> Booking Sekarang</a>
                     </div> --}}
                     <div class="booking mt-5 pb-5">
-                        <a class="btn btn-light px-4 py-3 rounded-0" style="font-weight: 600; font-size: 18px; " href="#"><i style="margin-right: 10px" class="fa-brands fa-whatsapp"></i> Booking Sekarang</a>
+                        <a class="btn btn-light px-4 py-3 rounded-0" style="font-weight: 600; font-size: 18px; " href="http://whatsapp.com" target="_blank"><i style="margin-right: 10px" class="fa-brands fa-whatsapp"></i> Booking Sekarang</a>
                     </div>
                 </div>
                 <div class="col"></div>
@@ -60,11 +60,11 @@
                     </div>
                 </div>
                 <div class="booking mt-2 pb-5 d-flex justify-content-center">
-                    <a class="btn btn-dark px-4 py-3 rounded-0" style="font-weight: 600; font-size: 18px; " href="#"><i style="margin-right: 10px" class="fa-brands fa-whatsapp"></i> Booking Sekarang</a>
+                    <a class="btn btn-dark px-4 py-3 rounded-0" style="font-weight: 600; font-size: 18px; " href="http://whatsapp.com" target="_blank"><i style="margin-right: 10px" class="fa-brands fa-whatsapp"></i> Booking Sekarang</a>
                 </div>
         </div>
     </section>
-    <section id="benefit">
+    <section id="benefit" class="pt-4">
         <div class="row">
             <div class="text col-lg-6">
                 <h1 class="mb-3" data-aos="fade-up" data-aos-once="true" style="font-weight: 500">{{ $benefit->heading }}</h1>
@@ -116,19 +116,19 @@
             </div>
         </div>
         <div class="booking mt-5 pb-5 d-flex justify-content-center">
-            <a class="btn btn-dark px-4 py-3 rounded-0" style="font-weight: 600; font-size: 18px; " href="#"><i style="margin-right: 10px" class="fa-brands fa-whatsapp"></i> Booking Sekarang</a>
+            <a class="btn btn-dark px-4 py-3 rounded-0" style="font-weight: 600; font-size: 18px; " href="http://whatsapp.com" target="_blank"><i style="margin-right: 10px" class="fa-brands fa-whatsapp"></i> Booking Sekarang</a>
         </div>
     </section>
     <section id="facility">
-        <h2 class="d-flex justify-content-center mb-4" data-aos="fade-up" data-aos-once="true" style="font-weight: 500; margin-top: 60px">Fasilitas Unggulan Villa Mountain Oasis</h2>
+        <h2 class="d-flex justify-content-center mb-4" data-aos="fade-up" data-aos-once="true" style="font-weight: 500; padding-top: 60px">Fasilitas Unggulan Villa Mountain Oasis</h2>
         <div class="row">
             @foreach ($facilities as $facility)   
             <div class="col-lg-3">
-                <div class="box p-2" data-aos="fade-up" data-aos-once="true" data-aos-duration="3000">
+                <div class="box p-2" data-aos="fade-up" data-aos-once="true" data-aos-duration="2000">
                     <img src="{{ asset('storage/' . $facility->image) }}" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h4 class="mt-2">{{ $facility->name }}</h4>
-                      <p class="card-text">{{ $facility->desc }}</p>
+                      <p class="card-text pb-5">{{ $facility->desc }}</p>
                     </div>
                   </div>
             </div>
@@ -136,6 +136,9 @@
         </div>
     </section>
     <section id="testimonial">
+        <div class="ornament d-flex justify-content-end">
+            <img src="/assets/img/ornament.png" alt="">
+        </div>
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -159,7 +162,7 @@
                 <div class="carousel-item">
                     <div class="row">
                         <div class="col-lg-5">
-                            <img src="{{ asset('storage/' . $testimoni->foto) }}" class="d-block w-100" alt="...">
+                            <img src="{{ asset('storage/' . $testimoni->foto) }}" class="d-block w-100" alt="..." style="max-height: 400px; min-height: 400px">
                         </div>
                         <div class="col"></div>
                         <div class="col-lg-6 py-5">.
@@ -234,7 +237,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="booking mt-4 pb-5 d-flex justify-content-center">
-                            <a class="btn btn-dark px-4 py-3 rounded-0" style="font-weight: 600; font-size: 18px; " href="#"><i style="margin-right: 10px" class="fa-brands fa-whatsapp"></i> Booking Sekarang</a>
+                            <a class="btn btn-dark px-4 py-3 rounded-0" style="font-weight: 600; font-size: 18px; " href="http://whatsapp.com" target="_blank"><i style="margin-right: 10px" class="fa-brands fa-whatsapp"></i> Booking Sekarang</a>
                         </div>
                     </div>
                 </div>
@@ -254,19 +257,18 @@
     </section> 
     <section id="footer">
         <div class="row footer-top" style="border-bottom: 1px solid #fff">
-            <div class="col-lg-6">
+            <div class="col-md-6">
                 <div class="text">
-                    <h2 style="padding-top: 40px" class="heading" data-aos="fade-up" data-aos-once="true">{{ $footer->heading }}</h2>
+                    <h2 style="padding-top: 60px" class="heading" data-aos="fade-up" data-aos-once="true">{{ $footer->heading }}</h2>
                     <p class="desc pt-3">{{ $footer->subHeading }}</p>
                 </div>
                 <div class="booking pt-4 pb-5">
-                    <a class="btn btn-light px-4 py-3 rounded-0" style="font-weight: 600; font-size: 18px; " href="#"><i style="margin-right: 10px" class="fa-brands fa-whatsapp"></i> Booking Sekarang</a>
+                    <a class="btn btn-light px-4 py-3 rounded-0" style="font-weight: 600; font-size: 18px; " href="http://whatsapp.com" target="_blank"><i style="margin-right: 10px" class="fa-brands fa-whatsapp"></i> Booking Sekarang</a>
                 </div>
             </div>
-            <div class="col-lg-6 d-flex align-items-center" >
-                {{-- style="position: absolute; z-index: 1; right: 10px; top: 1005px" --}}
-                <div class="image overflow-hidden">
-                    <img class="img-fluid " src="{{ asset('storage/' . $footer->image) }}" alt="">
+            <div class="col-md-6 d-flex align-items-center">
+                <div class="overflow-hidden">
+                    <img class="img-fluid" src="{{ asset('storage/' . $footer->image) }}" alt="">
                 </div>
             </div>
         </div>

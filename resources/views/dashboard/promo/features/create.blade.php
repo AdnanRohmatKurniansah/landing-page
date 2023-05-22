@@ -26,12 +26,16 @@
                             <div class="mb-3">
                                 <label for="icon" class="form-label">Icon</label>
                                 <input type="text" class="form-control @error('icon') is-invalid @enderror" id="icon" 
-                                name="icon" required autofocus value="{{ old('icon') }}">
+                                name="icon" required autofocus value="{{ old('icon') }}" oninput="previewIcon(this.value)">
                                 @error('icon')
                                     <div class="invalid-feedback">
                                       {{ $message }}
                                     </div>
                                 @enderror
+                              </div>
+                              <div class="mb-3">
+                                <label for="" class="form-label">Preview</label>
+                                <div class="previewIcon" style="font-size: 33px"></div>
                               </div>
                             <button type="submit" class="btn btn-primary">Add Feature</button>
                           </form> 
@@ -42,5 +46,13 @@
         </div>
     </div>
 </div>
+
+<script>
+  function previewIcon(icon) {
+    var iconName = icon.trim().toLowerCase().replace(/\s+/g, '-');
+    var previewElement = document.querySelector('.previewIcon');
+    previewElement.innerHTML = '<i class="fa-solid fa-' + iconName + '"></i>';
+  }
+</script>
 
 @endsection

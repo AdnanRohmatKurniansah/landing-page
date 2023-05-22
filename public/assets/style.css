@@ -399,6 +399,14 @@
   transition-delay: 0.2s;
 }
 
+@media(max-width: 1024px) {
+  #header .booking .btn, #footer .booking .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
 @media (max-width: 990px) {
     #header {
         padding-right: 20px;
@@ -434,6 +442,14 @@
   transition-delay: 0.2s;
 }
 
+@media(max-width: 1024px) {
+  #question .booking .btn, #benefit .booking .btn, #promo .booking .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
 @media (max-width: 1000px) {
     #question {
         padding-right: 20px;
@@ -450,7 +466,7 @@
     z-index: 1;
   }
 } */
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   #question .col-md-3 {
      position: absolute;
      top: 670px;
@@ -458,6 +474,32 @@
      z-index: 1;
   }
 }
+
+/* @media (min-width: 1400px) {
+  #question .col-md-3 {
+     position: absolute;
+     top: 830px;
+     left: 100px;
+     z-index: 1;
+  }
+}
+
+@media (min-width: 1500px) {
+  #question .col-md-3 {
+     position: absolute;
+     top: 880px;
+     left: 100px;
+     z-index: 1;
+  }
+}
+@media (min-width: 1600px) {
+  #question .col-md-3 {
+     position: absolute;
+     top: 930px;
+     left: 100px;
+     z-index: 1;
+  }
+} */
 
 @media (max-width: 991px) {
   #question .col-md-3 {
@@ -467,7 +509,7 @@
 
 
 #benefit {
-    background-color: #F8F6F3;
+    background-color: #F4F4F4;
     padding-right: 100px;
     padding-left: 100px;
 }
@@ -485,13 +527,14 @@
 }
 
 #facility {
+    background-color: #F8F6F3;
     padding-right: 100px;
     padding-left: 100px;
 }
 
 #facility .box:hover {
     outline: 1px solid rgb(231, 228, 228);
-    box-shadow: 20px 20px 20px whitesmoke;
+    box-shadow: 3px 3px 3px rgb(207, 206, 206)
 }
 
 @media (max-width: 1000px) {
@@ -503,6 +546,7 @@
 }
 
 #testimonial {
+    background-color: #F8F6F3;
     padding-top: 60px;
     padding-right: 100px;
     padding-left: 100px;
@@ -514,6 +558,12 @@
         padding-right: 20px;
         padding-left: 20px;
         text-align: center;
+    }
+}
+
+@media (max-width: 990px) {
+    #testimonial .ornament img{
+      display: none;
     }
 }
 
@@ -573,18 +623,18 @@
         text-align: center;
     }
 }
-
-/* @media (min-width: 1200px) {
-  #footer .col-lg-6 .image{
-     position: absolute;
-     top: 1000;
-     left: 500px;
-     z-index: 1;
+/* 
+@media (min-width: 1300px) {
+  #footer .footer-top .col-md-6:nth-child(2) {
+    position: absolute;
+    z-index: 1; 
+    right: 10px; 
+    top: 4170px;
   }
 }
 
 @media (max-width: 991px) {
-  #footer .col-lg-6 .image{
-    width: max-content;
+  #footer .footer-top .col-md-6:nth-child(2) {
+    display: none;
   }
-}  */
+} */

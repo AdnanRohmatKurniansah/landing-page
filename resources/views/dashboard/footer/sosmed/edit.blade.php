@@ -17,12 +17,22 @@
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>
                                 <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" 
-                                name="name" required autofocus value="{{ old('name', $sosmed->name) }}">
+                                name="name" required autofocus value="{{ old('name', $sosmed->name) }}" oninput="previewIcon(this.value)">
                                 @error('name')
                                     <div class="invalid-feedback">
                                       {{ $message }}
                                     </div>
                                 @enderror
+                              </div>
+                              <div class="mb-3">
+                                <label for="" class="form-label">Preview</label>
+                                <div class="previewIcon" style="font-size: 33px">
+                                  @if (old('name'))
+                                    <i class="fa-brands fa-{{ Str::slug(old('name')) }}"></i>
+                                  @else
+                                    <i class="fa-brands fa-{{ Str::slug($sosmed->name) }}"></i>
+                                  @endif
+                                </div>
                               </div>
                             <div class="mb-3">
                                 <label for="link" class="form-label">Link</label>
@@ -44,4 +54,18 @@
     </div>
 </div>
 
+<script>
+  function previewIcon(name) {
+    var iconName = name.trim().toLowerCase().replace(/\s+/g, '-');
+    var previewElement = document.querySelector('.previewIcon');
+    if (name) {
+      previewElement.innerHTML = '<i class="fa-brands fa-' + iconName + '"></i>';
+    } else {
+      var previousIcon = '{{ Str::slug($sosmed->name) }}';
+      previewElement.innerHTML = '<i class="fa-brands fa-' + previousIcon + '"></i>';
+    }
+  }
+</script>
+
 @endsection
+

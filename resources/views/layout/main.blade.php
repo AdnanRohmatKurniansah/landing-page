@@ -9,6 +9,42 @@
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+    .animated {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+    }
+    .animate {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+    }
+
+    @keyframes rotate {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(0.5);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+    }
+
+    @keyframes back {
+        0% { transform: rotate(360deg); }
+        100% { transform: rotate(0deg); }
+    }
+
+    .fa-x.animated {
+        animation-name: rotate;
+    }
+
+    .fa-whatsapp.animate {
+        animation-name: back;
+    }
+
+    </style>
 </head>
 <body>
     
@@ -18,28 +54,27 @@
     data-bs-title="
         <div class='row bg-success p-3 text-light'>
             <div class='col-lg-4'>
-                <i class='fa-brands fa-whatsapp'></i>
+                <img class='img-fluid rounded-circle' src='/assets/img/whatsapp.png' alt=''>
             </div>
             <div class='col-lg-8'>
                 <h5>Booking sekarang</h5>
-                <small>Hi! Pilih salah satu agen kami dibawah ini!</samll>
             </div>
         </div>"
     data-bs-content="<div class='content p-1'>
         <small>Kami akan membalas pesan Anda dalam beberapa menit.</small>
-        <a class='text-decoration-none text-light' href='http://facebook.com' target='_blank' rel='noopener noreferrer'>
-        <div class='row p-2 bg-dark'>
-            <div class='col-md-3'>
+        <a class='text-decoration-none text-black' href='http://whatsapp.com' target='_blank' rel='noopener noreferrer'>
+        <div class='row p-2 bg-gray'>
+            <div class='col-md-3 mt-2'>
                 <img class='img-fluid rounded-circle' src='/assets/img/admin.png' alt=''>
             </div>
             <div class='col-md-9'>
                 <div class='row'>
-                    <div class='col-md-6'>
+                    <div class='col-md-6 mt-2'>
                         <b>Admin</b>
                         <p>Admin</p>
                     </div>
-                    <div class='col-md-6'>
-                        <i class='fa-brands fa-whatsapp'></i>
+                    <div class='col-md-6 mt-2'>
+                       <img class='img-fluid rounded-circle d-flex' width='40px' src='/assets/img/wa.png' alt=''>
                     </div>
                 </div>
             </div>
@@ -64,10 +99,10 @@
             popoverTrigger.addEventListener('click', function() {
             if (isIconChanged) {
                 icon.classList.remove('fa-x');
-                icon.classList.add('fa-whatsapp');
+                icon.classList.add('fa-whatsapp', 'animate');
             } else {
                 icon.classList.remove('fa-whatsapp');
-                icon.classList.add('fa-x');
+                icon.classList.add('fa-x', 'animated');
             }
             isIconChanged = !isIconChanged;
             });

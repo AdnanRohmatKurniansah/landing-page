@@ -64,6 +64,7 @@
                 <span>Example: </span>
                 <img class="img-fluid" src="/assets/img/ex.png" alt="">
                 <li>Then just input</li>
+                <li>If the preview doesn't appear, it's possible that the word is written incorrectly or it's not found in the fontawesome documentation</li>
               </ol>
             </div>
           </div>

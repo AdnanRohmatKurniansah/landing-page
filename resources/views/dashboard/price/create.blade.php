@@ -5,13 +5,13 @@
     <div class="row">
         <div class="col-lg-10 mb-4 order-0">
           <div class="header">
-            <h3 class="fw-bold">Create Header</h3>
+            <h3 class="fw-bold">Create Price</h3>
            </div>
             <div class="card">
                 <div class="d-flex align-items-end row">
                 <div class="col-12">
                     <div class="card-body">
-                        <form action="/dashboard/promo" method="post" enctype="multipart/form-data" class="m-3">
+                        <form action="/dashboard/price" method="post" enctype="multipart/form-data" class="m-3">
                             @csrf
                             <div class="mb-3">
                                 <label for="offer" class="form-label">Offer</label>
@@ -43,21 +43,21 @@
                                     </div>
                                 @enderror
                               </div>
-                            <div class="mb-3">
-                                <label for="requirement" class="form-label">Requirement</label>
-                                <input type="text" class="form-control @error('requirement') is-invalid @enderror" id="requirement" 
-                                name="requirement" required autofocus value="{{ old('requirement') }}">
-                                @error('requirement')
+                              <div class="mb-3">
+                                <label for="promo" class="form-label">Promo</label>
+                                <input type="text" class="form-control @error('promo') is-invalid @enderror" id="promo" 
+                                name="promo" required autofocus value="{{ old('promo') }}">
+                                @error('promo')
                                     <div class="invalid-feedback">
                                       {{ $message }}
                                     </div>
                                 @enderror
                               </div>
                             <div class="mb-3">
-                                <label for="diskon" class="form-label">Diskon</label>
-                                <input type="text" class="form-control @error('diskon') is-invalid @enderror" id="diskon" 
-                                name="diskon" required autofocus value="{{ old('diskon') }}">
-                                @error('diskon')
+                                <label for="requirement" class="form-label">Requirement</label>
+                                <input type="text" class="form-control @error('requirement') is-invalid @enderror" id="requirement" 
+                                name="requirement" required autofocus value="{{ old('requirement') }}">
+                                @error('requirement')
                                     <div class="invalid-feedback">
                                       {{ $message }}
                                     </div>
@@ -84,7 +84,7 @@
                                     </div>
                                 @enderror
                               </div>
-                            <button type="submit" class="btn btn-primary">Add Promo</button>
+                            <button type="submit" class="btn btn-primary">Add Price</button>
                           </form> 
                     </div>
                 </div>

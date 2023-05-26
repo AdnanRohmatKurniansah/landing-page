@@ -50,37 +50,42 @@
     
     @yield('content')
     
+    @php
+        $wa = \App\Models\Whatsapp::first()
+    @endphp
     <a data-bs-toggle="popover" 
     data-bs-title="
         <div class='row bg-success p-3 text-light'>
-            <div class='col-lg-4'>
+            <div class='col'>
                 <img class='img-fluid rounded-circle' src='/assets/img/whatsapp.png' alt=''>
             </div>
-            <div class='col-lg-8'>
+            <div class='col'>
                 <h5>Booking sekarang</h5>
             </div>
         </div>"
-    data-bs-content="<div class='content p-1'>
-        <small>Kami akan membalas pesan Anda dalam beberapa menit.</small>
-        <a class='text-decoration-none text-black' href='http://whatsapp.com' target='_blank' rel='noopener noreferrer'>
-        <div class='row p-2 bg-gray'>
-            <div class='col-md-3 mt-2'>
-                <img class='img-fluid rounded-circle' src='/assets/img/admin.png' alt=''>
-            </div>
-            <div class='col-md-9'>
-                <div class='row'>
-                    <div class='col-md-6 mt-2'>
-                        <b>Admin</b>
-                        <p>Admin</p>
+        data-bs-content="
+        <div class='content p-1'>
+            <small>Kami akan membalas pesan Anda dalam beberapa menit.</small>
+            <a class='text-decoration-none text-black' href='{{ $wa->link }}' target='_blank' rel='noopener noreferrer'>
+                <div class='row p-2 bg-gray d-flex align-items-center'>
+                    <div class='col-4'>
+                        <img class='img-fluid rounded-circle'src='/assets/img/admin.png' alt=''>
                     </div>
-                    <div class='col-md-6 mt-2'>
-                       <img class='img-fluid rounded-circle d-flex' width='40px' src='/assets/img/wa.png' alt=''>
+                    <div class='col mt-3'>
+                        <div class='row'>
+                            <div class='col'>
+                                <b>Admin</b>
+                                <p>Admin</p>
+                            </div>
+                            <div class='col'>
+                                <img class='img-fluid rounded-circle d-flex' width='40px' src='/assets/img/wa.png' alt=''>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        </a>
-    </div>" 
+            </a>
+        </div>"
+    
     data-bs-html="true" class="scroll-top d-flex align-items-center justify-content-center"><i class="fa-brands fa-whatsapp" style="font-size: 33px"></i></a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>

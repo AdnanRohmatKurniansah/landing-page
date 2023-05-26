@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('headers', function (Blueprint $table) {
             $table->id();
             $table->text('logo');
-            $table->string('diskon');
+            $table->string('tagline');
             $table->string('heading');
             $table->text('subHeading');
             $table->text('image');

@@ -12,7 +12,7 @@ class FeatureController extends Controller
      */
     public function index()
     {
-        return view('dashboard.promo.features.index', [
+        return view('dashboard.price.features.index', [
             'features' => Feature::all()
         ]);
     }
@@ -22,7 +22,7 @@ class FeatureController extends Controller
      */
     public function create()
     {
-        return view('dashboard.promo.features.create');
+        return view('dashboard.price.features.create');
     }
 
     /**
@@ -53,7 +53,7 @@ class FeatureController extends Controller
      */
     public function edit(Feature $feature)
     {
-        return view('dashboard.promo.features.edit', [
+        return view('dashboard.price.features.edit', [
             'feature' => $feature
         ]);
     }

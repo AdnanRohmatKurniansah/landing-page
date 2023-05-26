@@ -3,7 +3,7 @@
 @section('content')
 <div class="container-xxl flex-grow-1 container-p-y">
     <div class="row">
-      <div class="col-lg-4 mb-3">
+      <div class="col-lg-3 mb-3">
         <div class="card">
               <div class="card-body">
                 <div class="card-title d-flex align-items-start justify-content-between">
@@ -31,7 +31,7 @@
               </div>
             </div>
       </div>
-      <div class="col-lg-4 mb-3">
+      <div class="col-lg-3 mb-3">
         <div class="card">
               <div class="card-body">
                 <div class="card-title d-flex align-items-start justify-content-between">
@@ -59,7 +59,31 @@
               </div>
             </div>
       </div>
-      <div class="col-lg-4 mb-3">
+      <div class="col-lg-3 mb-3">
+        <div class="card">
+              <div class="card-body">
+                <div class="card-title d-flex align-items-start justify-content-between">
+                  <div class="avatar flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 64 64" id="regular-visitor"><path d="M32 30.17c-3.37 0-6.11-2.74-6.11-6.11s2.74-6.11 6.11-6.11 6.11 2.74 6.11 6.11c.01 3.37-2.73 6.11-6.11 6.11zm0-10.28a4.174 4.174 0 0 0 0 8.35c2.3 0 4.17-1.87 4.17-4.18.01-2.3-1.86-4.17-4.17-4.17zm10.93 23.97H21.08c-.54 0-.97-.43-.97-.97 0-6.56 5.33-11.9 11.89-11.9 6.56 0 11.89 5.34 11.89 11.9.01.54-.43.97-.96.97zM22.1 41.92h19.81c-.49-5.04-4.74-9-9.91-9s-9.41 3.96-9.9 9z"></path><path d="M32 52.46c-11.28 0-20.46-9.18-20.46-20.46 0-11.28 9.18-20.46 20.46-20.46 11.28 0 20.46 9.18 20.46 20.46 0 11.28-9.17 20.46-20.46 20.46zm0-38.98c-10.21 0-18.52 8.31-18.52 18.52 0 10.21 8.31 18.52 18.52 18.52 10.21 0 18.52-8.31 18.52-18.52.01-10.22-8.3-18.52-18.52-18.52z"></path><path d="M32 61.19c-15.79 0-28.6-12.35-29.16-28.12a.97.97 0 0 1 .93-1c.55-.04.98.4 1 .93C5.3 47.72 17.26 59.25 32 59.25c.08 0 .17 0 .26-.01.53-.06 1 .35 1.05.88.05.53-.35 1-.88 1.05-.14.02-.29.02-.43.02z"></path><path d="M.97 37.35a.969.969 0 0 1-.74-1.6l2.88-3.39c.17-.21.43-.33.7-.34.27-.02.53.09.72.28l3.17 3.12c.38.38.39.99.01 1.37-.38.38-.99.39-1.37.01l-2.43-2.39-2.21 2.6c-.18.22-.46.34-.73.34zM60.19 31.92a.97.97 0 0 1-.97-.93C58.69 16.27 46.73 4.75 32 4.75h-.23a.981.981 0 0 1-1.07-.86.974.974 0 0 1 .86-1.07c.14-.01.3-.01.44-.01 15.78 0 28.59 12.35 29.16 28.11.02.54-.4.98-.93 1h-.04z"></path><path d="M60.15 31.97c-.25 0-.5-.1-.68-.28l-3.17-3.12a.966.966 0 0 1-.01-1.37c.38-.38.99-.39 1.37-.01l2.43 2.39 2.21-2.6c.35-.41.96-.46 1.37-.11.41.35.46.96.11 1.37l-2.88 3.39c-.17.21-.43.33-.7.34h-.05zM62.97 63.94c-.26 0-.51-.1-.7-.28L50.05 51.42a.966.966 0 0 1 0-1.37c.38-.38.99-.38 1.37 0l12.19 12.2a.965.965 0 0 1-.64 1.69zM13.25 14.23c-.25 0-.5-.09-.69-.28L.34 1.71a.966.966 0 0 1 0-1.37c.38-.38.99-.38 1.37 0l12.23 12.24a.966.966 0 0 1-.69 1.65z"></path><path d="M1.19 6.45a.97.97 0 0 1-.97-.93L.06 1.06C.05.79.15.53.34.34c.19-.19.45-.3.72-.28l4.45.16c.53.02.95.47.93 1-.01.53-.44.94-.96.94h-.04l-3.41-.13.12 3.41c.02.54-.4.98-.93 1-.01.01-.02.01-.03.01zm61.78 57.49h-.04l-4.45-.16a.97.97 0 0 1-.93-1 .95.95 0 0 1 1-.93l3.41.12-.13-3.41c-.02-.54.4-.99.93-1 .53-.04.99.4 1 .93l.16 4.45c.01.27-.09.53-.28.72-.16.18-.41.28-.67.28z"></path></svg>
+                  </div>
+                  <div class="dropdown">
+                    <button
+                      class="btn p-0"
+                      type="button"
+                      id="cardOpt3"
+                      data-bs-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                    </button>
+                  </div>
+                </div>
+                <span class="fw-semibold d-block mb-1">Visitor</span>
+                <h3 class="card-title mb-2">{{ $visitor }}</h3>
+              </div>
+            </div>
+      </div>
+      <div class="col-lg-3 mb-3">
         <div class="card">
               <div class="card-body">
                 <div class="card-title d-flex align-items-start justify-content-between">
@@ -107,5 +131,51 @@
             </div>
       </div>
     </div>
+    <canvas id="myChart"></canvas>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var visitorsData = @json($visitorsData);
+
+    var chartData = {
+      labels: visitorsData.map(data => (new Date(data.date)).toLocaleString('default', { month: 'long' })),
+      datasets: [{
+        label: 'Jumlah Pengunjung',
+        data: visitorsData.map(data => data.count),
+        backgroundColor: 'rgba(0, 123, 255, 0.5)',
+        borderColor: 'rgba(0, 123, 255, 1)',
+        borderWidth: 1,
+        barPercentage: 0.6,
+        categoryPercentage: 0.6
+      }]
+    };
+
+    var chartOptions = {
+      responsive: true,
+      maintainAspectRatio: true,
+      scales: {
+        x: {
+          type: 'category',
+          labels: visitorsData.map(data => (new Date(data.date)).toLocaleString('default', { month: 'long' })),
+          position: 'bottom'
+        },
+        y: { beginAtZero: true }
+      }
+    };
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: chartData,
+      options: chartOptions
+    });
+  });
+</script>
+
+
+
+
+
+
 @endsection

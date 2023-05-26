@@ -32,6 +32,7 @@ class TestimoniController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
+            'rate' => 'required',
             'name' => 'required|max:60',
             'address' => 'required',
             'opini' => 'required',
@@ -71,6 +72,7 @@ class TestimoniController extends Controller
     public function update(Request $request, Testimoni $testimoni)
     {
         $validatedData = $request->validate([
+            'rate' => 'required',
             'name' => 'required|max:60',
             'address' => 'required',
             'opini' => 'required',

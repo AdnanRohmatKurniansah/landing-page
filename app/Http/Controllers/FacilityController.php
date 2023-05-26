@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Facility;
+use App\Models\Title;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -14,7 +15,8 @@ class FacilityController extends Controller
     public function index()
     {
         return view('dashboard.facility.index', [
-            'facilities' => Facility::orderBy('id', 'desc')->get()
+            'facilities' => Facility::orderBy('id', 'desc')->get(),
+            'title' => Title::first()
         ]);
     }
 

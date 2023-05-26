@@ -24,7 +24,7 @@
                     <div class="logo">
                         <img src="{{ asset('storage/' . $header->logo) }}" width="150px" alt="">
                     </div>
-                    <h6 class="my-3" style="color: #3CBD6D">Diskon {{ $header->diskon }} %</h6>
+                    <h6 class="my-3" style="color: #3CBD6D">{{ $header->tagline }}</h6>
                     <div class="desc">
                         <h1 style="font-weight: 700" data-aos="fade-up" data-aos-once="true">{{ $header->heading }}</h1>
                     </div>
@@ -35,7 +35,7 @@
                         <a href="#"><i style="margin-right: 10px" class="fa-brands fa-whatsapp"></i> Booking Sekarang</a>
                     </div> --}}
                     <div class="booking mt-5 pb-5">
-                        <a class="btn btn-light px-4 py-3 rounded-0" style="font-weight: 600; font-size: 18px; " href="http://whatsapp.com" target="_blank"><i style="margin-right: 10px" class="fa-brands fa-whatsapp"></i> Booking Sekarang</a>
+                        <a class="btn btn-light px-4 py-3 rounded-0" style="font-weight: 600; font-size: 18px; " href="{{ $whatsapp->link }}" target="_blank"><i style="margin-right: 10px" class="fa-brands fa-{{ $whatsapp->icon }}"></i> {{ $whatsapp->text }}</a>
                     </div>
                 </div>
                 <div class="col"></div>
@@ -43,26 +43,27 @@
                     <img class="img-fluid h-100" data-aos="fade-left" data-aos-once="true" src="{{ asset('storage/' . $header->image) }}" alt="">
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-4 p-3 bg-black" style="border-bottom: 1px solid black" data-aos="fade-up" data-aos-once="true" data-aos-duration="1000"></div>
+            </div>
         </div>
     </section>
     <section id="question">
-            <div class="row">
-                <div class="solution col-md-3 p-5 d-flex align-items-center h-75"  data-aos="fade-up" data-aos-once="true" style="background-color: black">
-                    <h3 style="color: #fff">"{{ $promosi->heading }}"</h3>
-                </div>
-                {{-- <div class="col-md-4 p-5 d-flex align-items-center h-75" style="background-color: black; position: absolute; top: 650px; left: 100px; z-index: 1;">
-                    <h3 style="color: #fff" data-aos="fade-up" data-aos-once="true">"{{ $promosi->heading }}"</h3>
-                  </div> --}}
-                <div class="col"></div>
-                <div class="col-lg-7 pt-5" style="background-color: #F8F6F3">
-                    <div class="text">
-                        {!! $promosi->text !!}
-                    </div>
-                </div>
-                <div class="booking mt-2 pb-5 d-flex justify-content-center">
-                    <a class="btn btn-dark px-4 py-3 rounded-0" style="font-weight: 600; font-size: 18px; " href="http://whatsapp.com" target="_blank"><i style="margin-right: 10px" class="fa-brands fa-whatsapp"></i> Booking Sekarang</a>
-                </div>
-        </div>
+        <div class="row">
+            <div class="col-md-4 p-5 d-flex align-items-stretch" data-aos="fade-up" data-aos-once="true" style="background-color: black;">
+              <h3 class="pb-3" style="color: #fff; display: flex; flex-direction: column; justify-content: center; line-height: 1.2cm">"{{ $promosi->heading }}"</h3>
+            </div>
+            <div class="col"></div>
+            <div class="col-lg-7 pt-5" style="background-color: #F8F6F3;">
+              <div class="text">
+                {!! $promosi->text !!}
+              </div>
+            </div>
+            <div class="booking mt-2 pb-5 d-flex justify-content-center">
+              <a class="btn btn-dark px-4 py-3 rounded-0" style="font-weight: 600; font-size: 18px;" href="{{ $whatsapp->link }}" target="_blank"><i style="margin-right: 10px" class="fa-brands fa-{{ $whatsapp->icon }}"></i> {{ $whatsapp->text }}</a>
+            </div>
+          </div>
+          
     </section>
     <section id="benefit" class="pt-4">
         <div class="row">
@@ -116,16 +117,18 @@
             </div>
         </div>
         <div class="booking mt-5 pb-5 d-flex justify-content-center">
-            <a class="btn btn-dark px-4 py-3 rounded-0" style="font-weight: 600; font-size: 18px; " href="http://whatsapp.com" target="_blank"><i style="margin-right: 10px" class="fa-brands fa-whatsapp"></i> Booking Sekarang</a>
+            <a class="btn btn-dark px-4 py-3 rounded-0" style="font-weight: 600; font-size: 18px; " href="{{ $whatsapp->link }}" target="_blank"><i style="margin-right: 10px" class="fa-brands fa-{{ $whatsapp->icon }}"></i> {{ $whatsapp->text }}</a>
         </div>
     </section>
     <section id="facility">
-        <h2 class="d-flex justify-content-center mb-4" data-aos="fade-up" data-aos-once="true" style="font-weight: 500; padding-top: 60px">Fasilitas Unggulan Villa Mountain Oasis</h2>
+        <div class="d-flex justify-content-center mb-4" data-aos="fade-up" data-aos-once="true" style="font-weight: 500; padding-top: 60px">{!! $heading->heading !!}</div>
         <div class="row">
             @foreach ($facilities as $facility)   
-            <div class="col-lg-3">
+            <div class="col-lg-3 p-1">
                 <div class="box p-2" data-aos="fade-up" data-aos-once="true" data-aos-duration="2000">
-                    <img src="{{ asset('storage/' . $facility->image) }}" class="card-img-top" alt="...">
+                    <div class="d-flex justify-content-center">
+                        <img src="{{ asset('storage/' . $facility->image) }}" class="img-fluid" alt="...">
+                    </div>
                     <div class="card-body">
                       <h4 class="mt-2">{{ $facility->name }}</h4>
                       <p class="card-text pb-5">{{ $facility->desc }}</p>
@@ -151,6 +154,19 @@
                         <i class="fa-solid fa-quote-left mb-3" style="font-size: 60px"></i><br>
                         "{{ $testimonies[0]->opini }}"
                         <div class="identity mt-3">
+                            <div class="rate mb-2" style="font-size: 13px">
+                                @php
+                                    $rate = $testimonies[0]->rate;
+                                @endphp
+                                @for ($i = 1; $i <= 5; $i++)   
+                                    @if ($i <= $rate)
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                    @else
+                                        <i class="fa-regular fa-star text-warning"></i>
+                                    @endif
+                                @endfor
+                            </div>
+                            
                             <h6>{{ $testimonies[0]->name }}<br>
                             <span style="font-size: small; font-weight: 400">{{ $testimonies[0]->address }}</span>
                             </h6>
@@ -165,10 +181,22 @@
                             <img src="{{ asset('storage/' . $testimoni->foto) }}" class="d-block w-100" alt="..." style="max-height: 400px; min-height: 400px">
                         </div>
                         <div class="col"></div>
-                        <div class="col-lg-6 py-5">.
-                            <i class="fa-solid fa-quote-left" style="font-size: 40px"></i><br>
+                        <div class="col-lg-6 py-5" style="color: rgba(6, 18, 18, 0.68); font-size: 1.3em; ">.
+                            <i class="fa-solid fa-quote-left mb-3" style="font-size: 60px"></i><br>
                             {{ $testimoni->opini }}
                             <div class="identity mt-3">
+                                <div class="rate mb-2" style="font-size: 13px">
+                                    @php
+                                        $rate = $testimoni->rate;
+                                    @endphp
+                                    @for ($i = 1; $i <= 5; $i++)   
+                                        @if ($i <= $rate)
+                                            <i class="fa-solid fa-star text-warning"></i>
+                                        @else
+                                            <i class="fa-regular fa-star text-warning"></i>
+                                        @endif
+                                    @endfor
+                                </div>
                                 <h6>{{ $testimoni->name }}<br>
                                 <span style="font-size: small; font-weight: 400">{{ $testimoni->address }}</span>
                                 </h6>
@@ -195,39 +223,40 @@
                 <h2 style="font-weight: 700" data-aos="fade-up" data-aos-once="true">{{ $promo->heading }}</h2>
                 <div class="row">
                     @if ($features->count())
-                    <div class="col">
-                        <ul class="list-unstyled">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled" style="margin-bottom: 0">
                             @foreach ($features->take(10) as $feature)
                                 <li><i class="fa-solid fa-{{ $feature->icon }} m-2"></i> {{ $feature->name }}</li>
                             @endforeach
                         </ul>
                     </div>
-                    <div class="col">
-                        <ul class="list-unstyled">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled" style="margin-bottom: 0">
                             @foreach ($features->skip(10) as $feature)
                                 <li><i class="fa-solid fa-{{ $feature->icon }} m-2"></i> {{ $feature->name }}</li>
                             @endforeach
                         </ul>
                     </div>
                 @else
-                    <div class="col">
-                        <ul class="list-unstyled">
-                            <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
-                            <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
-                            <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
-                            <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
-                            <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <ul class="list-unstyled">
-                            <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
-                            <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
-                            <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
-                            <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
-                            <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
-                        </ul>
-                    </div>
+                <div class="col-md-6">
+                    <ul class="list-unstyled" style="margin-bottom: 0;">
+                      <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
+                      <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
+                      <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
+                      <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
+                      <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul class="list-unstyled" style="margin-bottom: 0;">
+                      <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
+                      <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
+                      <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
+                      <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
+                      <li><i class="fa-solid fa-square-minus m-2"></i> Lorem ipsum dolor sit.</li>
+                    </ul>
+                  </div>
+                  
                 @endif
                 </div>
                 <div class="row">
@@ -237,12 +266,12 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="booking mt-4 pb-5 d-flex justify-content-center">
-                            <a class="btn btn-dark px-4 py-3 rounded-0" style="font-weight: 600; font-size: 18px; " href="http://whatsapp.com" target="_blank"><i style="margin-right: 10px" class="fa-brands fa-whatsapp"></i> Booking Sekarang</a>
+                            <a class="btn btn-dark px-4 py-3 rounded-0" style="font-weight: 600; font-size: 18px; " href="{{ $whatsapp->link }}" target="_blank"><i style="margin-right: 10px" class="fa-brands fa-{{ $whatsapp->icon }}"></i> {{ $whatsapp->text }}</a>
                         </div>
                     </div>
                 </div>
                 <div class="input-group input-group-lg pb-3">
-                    <span class="input-group-text p-4" style="background-color: #1A4543; color: #fff; font-size: 15px" id="inputGroup-sizing-lg">Diskon {{ $promo->diskon }} %</span>
+                    <span class="input-group-text p-4" style="background-color: #1A4543; color: #fff; font-size: 15px" id="inputGroup-sizing-lg">{{ $promo->promo }}</span>
                     <input type="text" class="form-control" style="font-size: 13px; text-align: center; background-color: #fff" value="{{ $promo->requirement }}" disabled>
                   </div>
             </div>
@@ -257,13 +286,13 @@
     </section> 
     <section id="footer">
         <div class="row footer-top" style="border-bottom: 1px solid #fff">
-            <div class="col-md-6">
+            <div class="col-md-6" style="display: flex; flex-direction: column; justify-content: center;">
                 <div class="text">
-                    <h2 style="padding-top: 60px" class="heading" data-aos="fade-up" data-aos-once="true">{{ $footer->heading }}</h2>
+                    <h2 class="heading" data-aos="fade-up" data-aos-once="true">{{ $footer->heading }}</h2>
                     <p class="desc pt-3">{{ $footer->subHeading }}</p>
                 </div>
-                <div class="booking pt-4 pb-5">
-                    <a class="btn btn-light px-4 py-3 rounded-0" style="font-weight: 600; font-size: 18px; " href="http://whatsapp.com" target="_blank"><i style="margin-right: 10px" class="fa-brands fa-whatsapp"></i> Booking Sekarang</a>
+                <div class="booking pt-4">
+                    <a class="btn btn-light px-4 py-3 rounded-0" style="font-weight: 600; font-size: 18px; " href="{{ $whatsapp->link }}" target="_blank"><i style="margin-right: 10px" class="fa-brands fa-{{ $whatsapp->icon }}"></i> {{ $whatsapp->text }}</a>
                 </div>
             </div>
             <div class="col-md-6 d-flex align-items-center">

@@ -13,6 +13,7 @@
                 <tr>
                   <th>#</th>
                   <th>Name</th>
+                  <th>Rating</th>
                   <th>Address</th>
                   <th>Actions</th>
                 </tr>
@@ -22,6 +23,7 @@
                   <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $testimoni->name }}</td>
+                    <td>{{ $testimoni->rate }} <i class="fa-solid fa-star text-warning"></i></td>
                     <td>{{ $testimoni->address }}</td>
                     <td class="d-flex p-2">
                         <a href="/dashboard/testimoni/{{ $testimoni->id }}/edit" class="badge bg-success" style="font-size: 18px; margin-right: 5px"><i class="bx bx-edit-alt me-1"></i></a>

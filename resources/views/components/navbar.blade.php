@@ -68,22 +68,22 @@
           <div data-i18n="Basic">Testimoni</div>
         </a>
       </li>
-      <li class="menu-item {{ Request::is('dashboard/promo*') && !Request::is('dashboard/promosi*') || Request::is('dashboard/features*') ? 'active' : '' }}">
+      <li class="menu-item {{ Request::is('dashboard/price*') || Request::is('dashboard/features*') ? 'active' : '' }}">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
           <i class='menu-icon tf-icons bx bxs-discount'></i>
-          <div data-i18n="Account Settings">Promo</div>
+          <div data-i18n="Account Settings">Price</div>
         </a>
         <ul class="menu-sub">
-          <li class="menu-item {{ Request::is('dashboard/promo') && !Request::is('dashboard/promosi*') ? 'active' : '' }}">
-            <a href="/dashboard/promo" class="menu-link">
-              <div data-i18n="Account">Manage Promo</div>
+          <li class="menu-item {{ Request::is('dashboard/price') ? 'active' : '' }}">
+            <a href="/dashboard/price" class="menu-link">
+              <div data-i18n="Account">Manage Price</div>
             </a>
           </li>
         </ul>        
         <ul class="menu-sub">
           <li class="menu-item {{ Request::is('dashboard/features*') ? 'active' : '' }}">
             <a href="/dashboard/features" class="menu-link">
-              <div data-i18n="Account">Feature's Promo</div>
+              <div data-i18n="Account">Feature's Villa</div>
             </a>
           </li>
         </ul>
@@ -106,6 +106,11 @@
           </li>
         </ul>
       </li>
-      
+      <li class="menu-item {{ Request::is('dashboard/whatsapp*') ? 'active' : '' }}">
+        <a href="/dashboard/whatsapp" class="menu-link">
+          <i class='menu-icon tf-icons bx bxl-whatsapp'></i>
+          <div data-i18n="Basic">Whatsapp</div>
+        </a>
+      </li>
     </ul>
 </aside>

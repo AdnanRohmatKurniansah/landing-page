@@ -14,6 +14,21 @@
                         <form action="/dashboard/testimoni" method="post" enctype="multipart/form-data" class="m-3">
                             @csrf
                             <div class="mb-3">
+                              <label for="rate">Rating</label>
+                              <select name="rate" class="form-control">
+                                @php
+                                  $defaultRating = old('rate') ?? 1;
+                                @endphp
+                                @for ($i = 1; $i <= 5; $i++)
+                                  @if ($i == $defaultRating)
+                                    <option value="{{ $i }}" selected>{{ $i }}</option>
+                                  @else
+                                    <option value="{{ $i }}">{{ $i }}</option>
+                                  @endif
+                                @endfor
+                              </select>
+                            </div>
+                            <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>
                                 <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" 
                                 name="name" required autofocus value="{{ old('name') }}">

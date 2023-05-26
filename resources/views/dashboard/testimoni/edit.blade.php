@@ -15,6 +15,18 @@
                             @method('put')
                             @csrf
                             <div class="mb-3">
+                              <label for="rate">Rating</label>
+                              <select name="rate" class="form-control">
+                                  @for ($i = 1; $i <= 5; $i ++)
+                                      @if (old('rate', $testimoni->rate) == $i) 
+                                          <option value="{{ $i }}" selected>{{ $i }}</option>
+                                      @else
+                                          <option value="{{ $i }}">{{ $i }}</option>
+                                      @endif
+                                  @endfor
+                              </select>
+                          </div>  
+                            <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>
                                 <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" 
                                 name="name" required autofocus value="{{ old('name', $testimoni->name) }}">

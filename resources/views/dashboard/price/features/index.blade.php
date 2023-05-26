@@ -59,7 +59,7 @@
             </div>
             <div class="modal-body">
               <ol>
-                <li>Before adding or editing you should read the documentation of <a target="_blank" href="https://fontawesome.com/">fontawesome</a></li>
+                <li>Before adding or editing you should read the documentation of <a target="_blank" href="https://fontawesome.com/search?q=bed&o=r">fontawesome</a></li>
                 <li>Take the last name of the icon</li>
                 <span>Example: </span>
                 <img class="img-fluid" src="/assets/img/ex.png" alt="">

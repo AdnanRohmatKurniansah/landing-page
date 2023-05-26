@@ -31,7 +31,7 @@
                                             <div class="logo" data-class="logo">
                                                 <img src="{{ asset('storage/' . $header->logo) }}" width="150px" alt="">
                                             </div>
-                                            <h6 class="my-3 diskon" data-class="diskon" style="color: #3CBD6D">Diskon {{ $header->diskon }} %</h6>
+                                            <h6 class="my-3 tagline" data-class="tagline" style="color: #3CBD6D">{{ $header->tagline }}</h6>
                                             <div class="heading" data-class="heading">
                                                 <h1 style="font-weight: 700; color: #fff" data-aos="fade-up" data-aos-once="true">{{ $header->heading }}</h1>
                                             </div>

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('heading');
             $table->string('price');
             $table->string('requirement');
-            $table->string('diskon');
+            $table->string('promo');
             $table->text('image');
             $table->string('address');
             $table->timestamps();

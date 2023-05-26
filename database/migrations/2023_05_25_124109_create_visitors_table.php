@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('testimonis', function (Blueprint $table) {
+        Schema::create('visitors', function (Blueprint $table) {
             $table->id();
-            $table->string('rate');
-            $table->string('name');
-            $table->string('address');
-            $table->string('opini');
-            $table->text('foto');
+            $table->string('ip_address');
+            $table->text('user_agent');
+            $table->timestamp('visited_at')->useCurrent();
             $table->timestamps();
         });
     }
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('testimonis');
+        Schema::dropIfExists('visitors');
     }
 };

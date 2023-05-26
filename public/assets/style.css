@@ -407,14 +407,15 @@
   }
 }
 
+@media (max-width: 1000px) {
+  #header {
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+}
+}
+
 @media (max-width: 990px) {
-    #header {
-        padding-right: 20px;
-        padding-left: 20px;
-        text-align: center;
-    }
-
-
     #header .villa img{
         display: none;
     }
@@ -427,9 +428,10 @@
 }
 
 #question .text ul li {
-    font-size: x-large;
     color: #534543;
+    text-align: start;
 }
+
 
 #question .booking .btn, #benefit .booking .btn, #promo .booking .btn {
     background-color: #000;
@@ -454,7 +456,7 @@
     #question {
         padding-right: 20px;
         padding-left: 20px;
-        text-align: center;
+        text-align: left;
     }
 }
 
@@ -466,14 +468,14 @@
     z-index: 1;
   }
 } */
-@media (min-width: 1300px) {
+/* @media (min-width: 1300px) {
   #question .col-md-3 {
-     position: absolute;
+     position: absolute;  
      top: 670px;
      left: 100px;
      z-index: 1;
   }
-}
+} */
 
 /* @media (min-width: 1400px) {
   #question .col-md-3 {
@@ -502,7 +504,7 @@
 } */
 
 @media (max-width: 991px) {
-  #question .col-md-3 {
+  #question .col-md-4 {
     width: max-content;
   }
 } 
@@ -545,6 +547,14 @@
     }
 }
 
+@media (min-width: 1001px) {
+  #facility .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 #testimonial {
     background-color: #F8F6F3;
     padding-top: 60px;
@@ -560,6 +570,13 @@
         text-align: center;
     }
 }
+
+@media (max-width: 767px) {
+  .carousel-item .col-lg-5 img {
+    border-radius: 50%;
+  }
+}
+
 
 @media (max-width: 990px) {
     #testimonial .ornament img{
@@ -622,6 +639,12 @@
         padding-left: 20px;
         text-align: center;
     }
+}
+
+@media (max-width: 1300px) {
+  #footer .footer-top .text .heading{
+    margin-top: 40px;
+  }
 }
 /* 
 @media (min-width: 1300px) {

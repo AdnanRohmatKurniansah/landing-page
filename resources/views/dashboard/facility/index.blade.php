@@ -2,6 +2,22 @@
 
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
+      <div class="managae-heading mb-5">
+        <h4 class="fw-bold py-3 mb-2">Facility Heading</h4>
+        @if ($title !== null)
+            <a class="btn btn-primary mb-3" href="/dashboard/heading/1/edit">Edit</a> 
+        @else
+            <a class="btn btn-success mb-3" href="/dashboard/heading/create">Create</a>
+        @endif
+        <h4 class="mt-3 d-flex justify-content-center">
+          @if ($title !== null)
+            {!! $title->heading !!}
+          @else
+            <span class="text-danger">Heading masih kosong</span>
+          @endif
+        </h4>
+      </div>
+        
         <h4 class="fw-bold py-3 mb-2">Manage Facility</h4>
 
         <!-- Basic Bootstrap Table -->
@@ -39,4 +55,5 @@
         </div>
         <!--/ Basic Bootstrap Table -->
       </div>
+
 @endsection

@@ -11,6 +11,9 @@ use App\Http\Controllers\PromoController;
 use App\Http\Controllers\PromosiController;
 use App\Http\Controllers\SosmedController;
 use App\Http\Controllers\TestimoniController;
+use App\Http\Controllers\HeadingController;
+use App\Http\Controllers\VisitorController;
+use App\Http\Controllers\WhatsappController;
 use App\Models\Benefit;
 use App\Models\Daftar;
 use App\Models\Facility;
@@ -22,6 +25,7 @@ use App\Models\Promosi;
 use App\Models\Sosmed;
 use App\Models\Testimoni;
 use App\Models\User;
+use App\Models\Visitor;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,20 +39,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('landing', [
-        'header' => Header::first(),
-        'promosi' => Promosi::first(),
-        'facilities' => Facility::orderBy('id', 'desc')->get(),
-        'testimonies' => Testimoni::orderBy('id', 'desc')->get(),
-        'footer' => Footer::first(),
-        'sosmeds' => Sosmed::all(),
-        'benefit' => Benefit::first(),
-        'daftars' => Daftar::all(),
-        'promo' => Promo::first(),
-        'features' => Feature::all()
-    ]);
-});
+Route::get('/', [VisitorController::class, 'showPage']);
 
 Route::middleware(['guest'])->group(function() {
     Route::get('/login', [AuthController::class, 'index']);
@@ -58,13 +49,7 @@ Route::middleware(['guest'])->group(function() {
     Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
 
 Route::middleware(['auth'])->prefix('dashboard')->group(function() {
-    Route::get('/', function() {
-        return view('dashboard.index', [
-            'facility' => Facility::count(),
-            'testimoni' => Testimoni::count(),
-            'user' => User::count()
-        ]);
-    });
+    Route::get('/', [VisitorController::class, 'VisitorChart']);
     Route::get('/updatePass', [AuthController::class, 'show']);
     Route::post('/updatePass', [AuthController::class, 'updatePassword']);
     Route::get('/add', [AuthController::class, 'add']);
@@ -77,6 +62,13 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function() {
     Route::resource('/sosmed', SosmedController::class);
     Route::resource('/benefit', BenefitController::class);
     Route::resource('/daftar', DaftarController::class);
-    Route::resource('/promo', PromoController::class);
+    Route::resource('/price', PromoController::class);
     Route::resource('/features', FeatureController::class);
+    Route::resource('/whatsapp', WhatsappController::class);
+    Route::get('/heading/create', [HeadingController::class, 'create'])->name('tambah');
+    Route::post('/heading/create', [HeadingController::class, 'store'])->name('prosesTambah');
+    Route::get('/heading/{title:id}/edit', [HeadingController::class, 'edit'])->name('edit');
+    Route::post('/heading/{title:id}/edit', [HeadingController::class, 'update'])->name('prosesEdit');
 });
+
+ 

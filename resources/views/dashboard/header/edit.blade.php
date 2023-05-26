@@ -31,10 +31,10 @@
                               @enderror
                             </div>
                             <div class="mb-3">
-                                <label for="diskon" class="form-label">Diskon</label>
-                                <input type="text" class="form-control @error('diskon') is-invalid @enderror" id="diskon" 
-                                name="diskon" required autofocus value="{{ old('diskon', $header->diskon) }}">
-                                @error('diskon')
+                                <label for="tagline" class="form-label">Tagline</label>
+                                <input type="text" class="form-control @error('tagline') is-invalid @enderror" id="tagline" 
+                                name="tagline" required autofocus value="{{ old('tagline', $header->tagline) }}">
+                                @error('tagline')
                                     <div class="invalid-feedback">
                                       {{ $message }}
                                     </div>

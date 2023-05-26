@@ -14,8 +14,8 @@ class PromoController extends Controller
      */
     public function index()
     {
-        return view('dashboard.promo.index', [
-            'promo' => Promo::first(),
+        return view('dashboard.price.index', [
+            'price' => Promo::first(),
             'features' => Feature::all()
         ]);
     }
@@ -25,7 +25,7 @@ class PromoController extends Controller
      */
     public function create()
     {
-        return view('dashboard.promo.create');
+        return view('dashboard.price.create');
     }
 
     /**
@@ -38,7 +38,7 @@ class PromoController extends Controller
             'heading' => 'required|max:150',
             'price' => 'required|max:25',
             'requirement' => 'required',
-            'diskon' => 'required|max:3',
+            'promo' => 'required',
             'image' => 'image|file|max:2048',
             'address' => 'required|max:150'
         ]);  
@@ -49,7 +49,7 @@ class PromoController extends Controller
 
         Promo::create($validatedData);
         
-        return redirect('/dashboard/promo')->with('success', 'New Promo has been added!');
+        return redirect('/dashboard/price')->with('success', 'New Price has been added!');
     }
 
     /**
@@ -63,24 +63,24 @@ class PromoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Promo $promo)
+    public function edit(Promo $price)
     {
-        return view('dashboard.promo.edit', [
-            'promo' => $promo
+        return view('dashboard.price.edit', [
+            'price' => $price
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Promo $promo)
+    public function update(Request $request, Promo $price)
     {
         $validatedData = $request->validate([
             'offer' => 'required',
             'heading' => 'required|max:150',
             'price' => 'required|max:25',
             'requirement' => 'required',
-            'diskon' => 'required|max:3',
+            'promo' => 'required',
             'image' => 'image|file|max:2048',
             'address' => 'required|max:150'
         ]);
@@ -96,22 +96,22 @@ class PromoController extends Controller
             $validatedData['image'] = $request->file('image')->store('promo-images');
         } 
 
-        Promo::where('id', $promo->id)
+        Promo::where('id', $price->id)
         ->update($validatedData);
    
-        return redirect('/dashboard/promo')->with('success', 'Promo has been updated!');
+        return redirect('/dashboard/price')->with('success', 'Price has been updated!');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Promo $promo)
+    public function destroy(Promo $price)
     {
-        if ($promo->image) {
-            Storage::delete($promo->image);
-        }
+        // if ($price->image) {
+        //     Storage::delete($price->image);
+        // }
         
-        Promo::destroy($promo->id);
-        return redirect('/dashboard/promo')->with('success', 'Promo has been deleted!');
+        // Promo::destroy($price->id);
+        // return redirect('/dashboard/price')->with('success', 'Price has been deleted!');
     }
 }

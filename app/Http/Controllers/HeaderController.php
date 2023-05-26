@@ -33,7 +33,7 @@ class HeaderController extends Controller
     {
         $validatedData = $request->validate([
             'logo' => 'image|file|max:2048',
-            'diskon' => 'required|max:3',
+            'tagline' => 'required',
             'heading' => 'required|max:100',
             'subHeading' => 'required',
             'image' => 'image|file|max:2048'
@@ -77,7 +77,7 @@ class HeaderController extends Controller
     {
         $validatedData = $request->validate([
             'logo' => 'image|file|max:2048',
-            'diskon' => 'required|max:3',
+            'tagline' => 'required',
             'heading' => 'required|max:100',
             'subHeading' => 'required',
             'image' => 'image|file|max:2048'

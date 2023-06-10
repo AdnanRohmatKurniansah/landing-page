@@ -23,7 +23,7 @@ class TestimoniController extends Controller
      */
     public function create()
     {
-        return view('dashboard.testimoni.create');
+        return view('landing');
     }
 
     /**
@@ -35,7 +35,7 @@ class TestimoniController extends Controller
             'rate' => 'required',
             'name' => 'required|max:60',
             'address' => 'required',
-            'opini' => 'required',
+            'opini' => 'required|min:5',
             'foto' => 'image|file|max:2048'
         ]);  
 
@@ -45,7 +45,7 @@ class TestimoniController extends Controller
 
         Testimoni::create($validatedData);
         
-        return redirect('/dashboard/testimoni')->with('success', 'New Testimoni has been added!');
+        return redirect('/')->with('success', 'Thank you for your review...');
     }
 
     /**
@@ -71,29 +71,14 @@ class TestimoniController extends Controller
      */
     public function update(Request $request, Testimoni $testimoni)
     {
-        $validatedData = $request->validate([
-            'rate' => 'required',
-            'name' => 'required|max:60',
-            'address' => 'required',
-            'opini' => 'required',
-            'foto' => 'image|file|max:2048'
+        $status = $request->validate([
+            'status' => 'required'
         ]);
-
-        if ($request->file('foto')) {
-            if ($request->oldFoto) {
-                Storage::delete($request->oldFoto);
-            }
-            $validatedData['foto'] = $request->file('foto')->store('testimoni-images');
-        }
-
-        if($request->file('foto')) {
-            $validatedData['foto'] = $request->file('foto')->store('testimoni-images');
-        } 
-
+        
         Testimoni::where('id', $testimoni->id)
-        ->update($validatedData);
+        ->update($status);
    
-        return redirect('/dashboard/testimoni')->with('success', 'Testimoni has been updated!');
+        return redirect('/dashboard/testimoni')->with('success', 'Testimoni has been published!');
     }
 
     /**

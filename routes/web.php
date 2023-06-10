@@ -38,7 +38,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get('/', [TestimoniController::class, 'create']);
+Route::post('/', [TestimoniController::class, 'store']);
 Route::get('/', [VisitorController::class, 'showPage']);
 
 Route::middleware(['guest'])->group(function() {
@@ -57,7 +58,11 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function() {
     Route::resource('/header', HeaderController::class);
     Route::resource('/promosi', PromosiController::class);
     Route::resource('/facility', FacilityController::class);
-    Route::resource('/testimoni', TestimoniController::class);
+    // Route::resource('/testimoni', TestimoniController::class);
+    Route::get('/testimoni', [TestimoniController::class, 'index']);
+    Route::get('/testimoni/{testimoni:id}/edit', [TestimoniController::class, 'edit']);
+    Route::put('/testimoni/{testimoni:id}/edit', [TestimoniController::class, 'update']);
+    Route::delete('/testimoni/{testimoni:id}', [TestimoniController::class, 'destroy']);
     Route::resource('/footer', FooterController::class);
     Route::resource('/sosmed', SosmedController::class);
     Route::resource('/benefit', BenefitController::class);

@@ -13,11 +13,12 @@ return new class extends Migration
     {
         Schema::create('testimonis', function (Blueprint $table) {
             $table->id();
-            $table->string('rate');
+            $table->decimal('rate', 8, 2);
             $table->string('name');
             $table->string('address');
             $table->string('opini');
             $table->text('foto');
+            $table->string('status')->default('notPublished');
             $table->timestamps();
         });
     }

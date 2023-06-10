@@ -388,7 +388,7 @@
 #header .booking a:hover, #footer .booking a:hover {
     color: gray;
 } */
-#header .booking .btn, #footer .booking .btn {
+/* #header .booking .btn, #footer .booking .btn {
   transition: transform 0.2s ease;
 }
 
@@ -405,7 +405,51 @@
     width: 100%;
     text-align: center;
   }
+} */
+
+#header .booking a, #footer .booking a{
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+  width: fit-content;
 }
+
+#header .booking a span, #footer .booking a span {
+  position: relative;
+  z-index: 2;
+}
+
+#header .booking a:after, #footer .booking a:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #2DB742;
+  transition: all .35s;
+}
+
+#header .booking a:hover, #footer .booking a:hover {
+  color: #fff;
+}
+
+#header .booking a:hover:after, #footer .booking a:hover:after {
+  width: 100%;
+}
+
+@media(max-width: 1024px) {
+  #header .booking a, #footer .booking a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+} 
+
+
+
 
 @media (max-width: 1000px) {
   #header {
@@ -433,7 +477,7 @@
 }
 
 
-#question .booking .btn, #benefit .booking .btn, #promo .booking .btn {
+/* #question .booking .btn, #benefit .booking .btn, #promo .booking .btn {
     background-color: #000;
     color: #fff;
     transition: transform 0.2s ease;
@@ -450,7 +494,47 @@
     width: 100%;
     text-align: center;
   }
+} */
+#question .booking a, #benefit .booking a, #promo .booking a{
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+  width: fit-content;
 }
+
+#question .booking a span, #benefit .booking a span, #promo .booking a span {
+  position: relative;
+  z-index: 2;
+}
+
+#question .booking a:after, #benefit .booking a:after, #promo .booking a:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #2DB742;
+  transition: all .35s;
+}
+
+#question .booking a:hover, #benefit .booking a:hover, #promo .booking a:hover {
+  color: #fff;
+}
+
+#question .booking a:hover:after, #benefit .booking a:hover:after, #promo .booking a:hover:after {
+  width: 100%;
+}
+
+@media(max-width: 1024px) {
+  #question .booking a, #benefit .booking a, #promo .booking a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+} 
 
 @media (max-width: 1000px) {
     #question {
@@ -569,14 +653,23 @@
         padding-left: 20px;
         text-align: center;
     }
+    #testimonial .rate-me {
+      text-align: left;
+    }
 }
 
-@media (max-width: 767px) {
-  .carousel-item .col-lg-5 img {
-    border-radius: 50%;
+
+@media (max-width: 992px) {
+  .imgDesktop {
+      display: none;
   }
 }
 
+@media (min-width: 992px) {
+  .imgMobile {
+      display: none;
+  }
+}
 
 @media (max-width: 990px) {
     #testimonial .ornament img{
@@ -661,3 +754,31 @@
     display: none;
   }
 } */
+.rating {
+  border: none;
+  float: left;
+}
+
+.rating > label {
+  color: #90A0A3;
+  float: right;
+}
+
+.rating > label:before {
+  margin: 5px;
+  font-size: 1.5em;
+  font-family: FontAwesome;
+  content: "\f005";
+  display: inline-block;
+}
+
+.rating > input {
+  display: none;
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #F79426;
+}
+

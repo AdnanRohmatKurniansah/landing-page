@@ -16,7 +16,6 @@ use App\Models\Title;
 use App\Models\User;
 use App\Models\Visitor;
 use App\Models\Whatsapp;
-use ArielMejiaDev\LarapexCharts\LarapexChart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -36,7 +35,7 @@ class VisitorController extends Controller
         'header' => Header::first(),
         'promosi' => Promosi::first(),
         'facilities' => Facility::orderBy('id', 'desc')->get(),
-        'testimonies' => Testimoni::orderBy('id', 'desc')->get(),
+        'testimonies' => Testimoni::where('status', 'published')->orderBy('id', 'desc')->get(),
         'footer' => Footer::first(),
         'sosmeds' => Sosmed::all(),
         'benefit' => Benefit::first(),
@@ -44,7 +43,7 @@ class VisitorController extends Controller
         'promo' => Promo::first(),
         'features' => Feature::all(),
         'whatsapp' => Whatsapp::first(),
-        'heading' => Title::first()
+        'heading' => Title::first(),
     ];
 
     return view('landing', $data);
@@ -52,7 +51,7 @@ class VisitorController extends Controller
     public function VisitorChart()
 {
     $facility = Facility::count();
-    $testimoni = Testimoni::count();
+    $testimoni = Testimoni::where('status', 'published')->count();
     $user = User::count();
     $visitor = Visitor::count();
 

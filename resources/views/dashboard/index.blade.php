@@ -131,7 +131,13 @@
             </div>
       </div>
     </div>
-    <canvas id="myChart"></canvas>
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+    </div>
 </div>
 
 <script>
@@ -142,7 +148,7 @@
     var chartData = {
       labels: visitorsData.map(data => (new Date(data.date)).toLocaleString('default', { month: 'long' })),
       datasets: [{
-        label: 'Jumlah Pengunjung',
+        label: 'Visitor Count',
         data: visitorsData.map(data => data.count),
         backgroundColor: 'rgba(0, 123, 255, 0.5)',
         borderColor: 'rgba(0, 123, 255, 1)',
@@ -162,7 +168,8 @@
           position: 'bottom'
         },
         y: { beginAtZero: true }
-      }
+      }, 
+      
     };
 
     new Chart(ctx, {
@@ -172,10 +179,5 @@
     });
   });
 </script>
-
-
-
-
-
 
 @endsection
